@@ -24,5 +24,33 @@
     },
     "AboutPage": {
         "title": "Acerca de"
+    },
+    "ProjectsPage": {
+        "projects": [
+            {
+                "title": "Cosmic Hall",
+                "url": "https://www.cosmic-hall.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
+                "imgAlt": "",
+                "desc": "Aula virtual destinada a enseñar los fundamentos del cosmos. Temas relacionados con los malentendidos comunes y los fundamentos que lo rodean.",
+                "tags": [
+                    "html",
+                    "css",
+                    "js"
+                ]
+            },
+            {
+                "title": "SGM Scapes",
+                "url": "https://www.sgmscapes.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
+                "imgAlt": "",
+                "desc": "Sitio web para una empresa local de paisajismo y hardscaping. Incluye páginas estándar, así como un asistente personalizado para estimar proyectos. También cuenta con un área de noticias y un carrusel.",
+                "tags": [
+                    "html",
+                    "css",
+                    "js"
+                ]
+            }
+        ]
     }
 }
