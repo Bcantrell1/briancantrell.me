@@ -24,5 +24,34 @@
     },
     "AboutPage": {
         "title": "About"
+    },
+    "ProjectsPage": {
+        "projects": [
+            {
+                "title": "Cosmic Hall",
+                "url": "https://www.cosmic-hall.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
+                "imgAlt": "",
+                "desc": "Virtual classroom intended to teach the basics of the cosmos. Topics related to common misunderstandings and the basics surrounding the industry. ",
+                "tags": [
+                    "html",
+                    "css",
+                    "react",
+                    "ts"
+                ]
+            },
+            {
+                "title": "SGM Scapes",
+                "url": "https://www.sgmscapes.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
+                "imgAlt": "",
+                "desc": "A website for a local landscaping | hardscaping company. It features your standard pages as well a custom wizard for estimating projects. Other goodies include a news area and a carousel.",
+                "tags": [
+                    "html",
+                    "css",
+                    "react"
+                ]
+            }
+        ]
     }
 }

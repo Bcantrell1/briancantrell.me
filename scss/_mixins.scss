@@ -6,6 +6,42 @@
   list-style: none;
 }
 
+.buttonStyle {
+  border-radius: 0.5em;
+  border: transparent;
+  padding: 15px;
+  cursor: pointer;
+  user-select: none;
+
+  &.primary {
+    background-color: $btn1_bg;
+    color: $btn1_clr;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.default {
+    background-color: $btn2_bg;
+    color: $btn2_clr;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.ghost {
+    background-color: $btn3_bg;
+    color: $btn3_clr;
+    border: 1px solid $btn3_clr;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
 @mixin circle($dimensions) {
   border-radius: 50%;
   width: $dimensions;

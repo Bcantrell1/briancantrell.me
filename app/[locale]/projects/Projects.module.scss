@@ -1,0 +1,10 @@
+@use '../../../scss/' as *;
+
+.projects {
+	overflow-y: scroll !important;
+	@include mainMiddleSettings;
+
+	@media (max-width: 768px) {
+		@include phone-borders;
+	}
+}

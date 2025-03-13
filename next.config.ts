@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
     sassOptions: {
         includePaths: ['./scss'],
     },
+    images: {
+        remotePatterns: [
+            {
+                hostname: 'res.cloudinary.com',
+            }
+        ]
+    }   
 };
  
 const withNextIntl = createNextIntlPlugin();
