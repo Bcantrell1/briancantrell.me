@@ -11,9 +11,8 @@ export default function LangToggle() {
     const pathname = usePathname();
     const [isPending, startTransition] = useTransition();
 
-    const toggleLocale = () => {
-        const nextLocale = locale === 'en' ? 'es' : 'en';
-
+    const toggleLocale = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const nextLocale = e.target.value;
         startTransition(() => {
             router.replace(pathname, { locale: nextLocale });
         });
@@ -21,17 +20,11 @@ export default function LangToggle() {
 
     const languages = [
         { code: 'en', name: 'English', flag: 'us' },
-        { code: 'es', name: 'Spanish', flag: 'es' },
+        { code: 'es', name: 'Español', flag: 'es' },
     ];
 
-    const getRegionCode = (iso: string) => {
-        const parts = iso.split('-')
-        return parts.length > 1 ? parts[1] : parts[0] // Fallback to the full code if no region is found
-    }
-
-    const getFlagEmoji = (countryCode: string) => {
-        if (!countryCode) return '' // Return empty string if no country code is found
-        // Convert country code to regional indicator symbols
+    const getFlag = (countryCode: string) => {
+        if (!countryCode) return ''
         return String.fromCodePoint(...[...countryCode.toUpperCase()].map(c => 0x1F1E6 + c.charCodeAt(0) - 65))
     }
 
@@ -42,14 +35,14 @@ export default function LangToggle() {
                 onChange={toggleLocale}
                 disabled={isPending}
                 value={locale}
-                aria-label={`Switch to ${locale === 'en' ? 'Spanish' : 'English'}`}
+                aria-label={`Switch to ${locale === 'en' ? 'Español' : 'English'}`}
             >
                 {languages.map((language) => {
                     // Find the current language to get its flag code
                     const flag = language.flag || language.code
                     return (
                         <option key={language.code} value={language.code}>
-                            {getFlagEmoji(flag)} {language.name}
+                            {getFlag(flag)} {language.name}
                         </option>
                     )
                 })}

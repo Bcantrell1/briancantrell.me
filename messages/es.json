@@ -1,7 +1,26 @@
 {
     "HomePage": {
-        "title": "Hola mundo!",
-        "about": "Ir a la página de about"
+        "title": "Brian Cantrell - Desarrollador Full Stack",
+        "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar.",
+        "greeting": "Hola a todos, soy",
+        "name": "Brian Cantrell",
+        "role": "> Ingeniero de Software",
+        "task": "// juega mi juego si quieres",
+        "github": "// también puedes encontrar en mi página de Github",
+        "profile": "github.com/bcantrell1",
+        "pageMobile": "// Encuentra mi perfil en Github",
+        "gameTips_0": "// usa el teclado",
+        "gameTips_1": "// para jugar",
+        "foodLeft": "// comida restante",
+        "gameCommand": "Comenzar Juego",
+        "gameCongratsTitle": "¡Victoria!",
+        "gameCongrats": "¡Felicidades! Has ganado el juego!",
+        "skip": "Omitir",
+        "score": "Puntuación",
+        "scores": "Puntuaciones",
+        "hasWon": "¡Bien hecho!",
+        "hasNotWon": "¡Juego terminado!",
+        "again": "Comenzar de nuevo"
     },
     "AboutPage": {
         "title": "Acerca de"
