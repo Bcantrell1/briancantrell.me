@@ -1,7 +1,7 @@
 import { NextIntlClientProvider, Locale, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import Header from '@/components/Header';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
 import '../../scss/main.scss';
@@ -24,7 +24,7 @@ export default async function LocaleLayout({
 			<body>
 				<div id="__next">
 					<NextIntlClientProvider>
-						<Header name="Brian Cantrell" />
+						<Navbar name="Brian Cantrell" />
 						{children}
 						<Footer />
 					</NextIntlClientProvider>

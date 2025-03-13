@@ -1,37 +1,36 @@
 :root {
-  height: 100vh;
-  width: 100vw;
+	height: 100vh;
+	width: 100vw;
 }
 
 body {
-  background-color: #01080e;
-  color: #607b96;
+	background-color: #01080e;
+	color: #607b96;
 }
 
 #__next {
-  margin: 30px;
+	margin: 30px;
 
-  @media (max-width: 768px) {
-    margin: 15px;
-  }
+	@media (max-width: 768px) {
+		margin: 15px;
+	}
 }
 
 .title {
-  font-family: 'Fira Code', monospace;
+	font-family: 'Fira Code', monospace;
 }
 
 .container {
-  background-color: #01080e;
-  color: white;
+	background-color: #01080e;
+	color: white;
 }
 
-/* Transition for router-view */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+	opacity: 0;
 }

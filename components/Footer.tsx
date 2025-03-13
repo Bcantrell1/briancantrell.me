@@ -8,9 +8,9 @@ import Link from 'next/link';
 const { socialLinks } = socialData[0];
 const [facebookLink, githubLink] = socialLinks?.map((link: any) => link.url) || [];
 
-const Footer = () => {
+const Footer = ({ style }: { style?: React.CSSProperties }) => {
 	return (
-		<footer className={styles.footer}>
+		<footer className={styles.footer} style={style}>
 			<div className={styles.container}>
 				<p>Hit me up:</p>
 				<div className={styles.social}>

@@ -47,8 +47,6 @@
 
   & {
     @media (min-width: 768px) {
-      // height: calc(100vh - 180px);
-      // height: calc(100% - 180px);
       overflow: hidden;
     }
 
@@ -57,8 +55,6 @@
     }
   }
 }
-
-@mixin viewsRadius {}
 
 @mixin phone-borders {
   border-top: 1px solid $lines !important;
