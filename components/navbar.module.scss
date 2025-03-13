@@ -202,7 +202,6 @@
                     height: calc(100vh - 88px);
                     align-content: flex-start;
                     @include mainMiddleSettings;
-                    overflow: hidden;
 
                     .name {
                         padding: 20px;
