@@ -19,7 +19,7 @@ export default function HomePage() {
           </div>
           <div className={styles.github_repo}>
             <p>{ t('pageMobile') }</p>
-            <span>const</span> <span>githubLink</span> =
+            <span>const</span> <span>githubLink</span> {` = `}
             <Link
               aria-label="go to my github page"
               href="https://github.com/bcantrell1"

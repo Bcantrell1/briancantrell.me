@@ -18,11 +18,27 @@
 				"container-class": "github"
 			},
 			{
-				"social-title": "instagram",
-				"url": "https://www.instagram.com/trell546/",
+				"social-title": "gitlab",
+				"url": "https://gitlab.com/bcantrell",
 				"img": "",
 				"imgAlt": "",
-				"desc": "Hit me up on Instagram",
+				"desc": "Hit me up on Gitlab",
+				"container-class": "instagram"
+			},
+			{
+				"social-title": "codepen",
+				"url": "https://codepen.io/bcantrell1",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Codepen",
+				"container-class": "instagram"
+			},
+			{
+				"social-title": "linkedin",
+				"url": "https://www.linkedin.com/in/bcantrell1/",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Linkedin",
 				"container-class": "instagram"
 			}
 		]

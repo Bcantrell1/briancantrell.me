@@ -43,13 +43,9 @@
                 }
             }
 
-            .instagram {
+            .item {
                 text-align: center;
                 padding-top: 18px;
-            }
-
-            .facebook {
-                padding-top: 7px;
             }
         }
 
@@ -98,6 +94,7 @@
 
                 p {
                     flex: 1;
+                    display: none;
                 }
 
                 .github {

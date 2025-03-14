@@ -44,7 +44,6 @@ const Navbar = ({ name }: { name: string }) => {
 	};
 
 	const isActive = (href: string) => {
-		console.log(pathname, href);
 		if (href === '/') {
 			return pathname === href;
 		}
