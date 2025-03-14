@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './FoldableTab.module.scss';
+import { Triangle } from 'lucide-react';
 
 interface FoldableTabProps {
   initiallyFolded?: boolean;
@@ -27,7 +28,7 @@ const FoldableTab: React.FC<FoldableTabProps> = ({ initiallyFolded = false, onTo
           className={`${styles.foldableTab} ${isToggled ? styles.isFolded : ''}`}
           onClick={toggleFolding}
         >
-          <span className="fas fa-triangle" />
+          <Triangle color='#fff' />
           {children}
         </div>
       </div>

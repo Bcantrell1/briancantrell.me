@@ -19,7 +19,7 @@
 			align-items: center;
 			padding: 10px 15px;
 			position: relative;
-			border: solid 1px #ccc;
+			border: solid 1px $lines;
 			border-top-style: none;
 
 			.remove {
@@ -33,10 +33,12 @@
 			}
 		}
 	}
-}
 
-@media (max-width: 768px) {
-	.selectTab {
+	@media (max-width: 945px) {
+		left: 169px;
+	}
+
+	@media (max-width: 768px) {
 		display: none;
 	}
 }
