@@ -25,6 +25,11 @@
     "AboutPage": {
         "title": "Acerca de"
     },
+    "NotFound": {
+        "pageNotFound": "Página no encontrada",
+        "backToMain": "volver a la página principal",
+        "backToMainArea": "ir a la página principal"
+    },
     "ProjectsPage": {
         "projects": [
             {
