@@ -31,7 +31,7 @@
                 "title": "Cosmic Hall",
                 "url": "https://www.cosmic-hall.com/",
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
-                "imgAlt": "",
+                "imgAlt": "Home page of Cosmic Hall",
                 "desc": "Aula virtual destinada a enseñar los fundamentos del cosmos. Temas relacionados con los malentendidos comunes y los fundamentos que lo rodean.",
                 "tags": [
                     "html",
@@ -43,12 +43,65 @@
                 "title": "SGM Scapes",
                 "url": "https://www.sgmscapes.com/",
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
-                "imgAlt": "",
+                "imgAlt": "Home page of SGM Scapes",
                 "desc": "Sitio web para una empresa local de paisajismo y hardscaping. Incluye páginas estándar, así como un asistente personalizado para estimar proyectos. También cuenta con un área de noticias y un carrusel.",
                 "tags": [
                     "html",
                     "css",
                     "js"
+                ]
+            },
+            {
+                "title": "Dota 2 Analytics",
+                "url": "https://dongalyticsv2.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741911853/dongpng_rr0vra.png",
+                "imgAlt": "Home page of Dota 2 Analytics",
+                "desc": "Un tablero para ver estadísticas y análisis de Dota 2 en el modo turbo. Este fue creado originalmente para un gremio de Dota 2, pero se convirtió en un trabajo para un grupo de Discord, por lo que lo mantuve actualizado.",
+                "tags": [
+                    "html",
+                    "css",
+                    "react",
+                    "ts"
+                ]
+            },
+            {
+                "title": "Automatit Inc.",
+                "url": "https://automatit.net/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741912187/Screenshot_2025-03-13_172930_o5s1om.png",
+                "imgAlt": "Home page of Automatit Inc.",
+                "desc": "Sitio web totalmente personalizado como desarrollador principal de la empresa. Construido con CodeIgniter (PHP) y un CMS personalizado. El proyecto incluye ~28 páginas de contenido personalizado y lógica, junto con un panel de administración para marketing y ventas.",
+                "tags": [
+                    "php",
+                    "codeigniter",
+                    "mysql",
+                    "html",
+                    "css",
+                    "js"
+                ]
+            },
+            {
+                "title": "Portafolio de 2022",
+                "url": "https://2022-portfolio-bcantrell1.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/t_Banner 16:9/v1741924952/Screenshot_2025-03-13_210216_lkkdox.png",
+                "imgAlt": "Home page of my old 2022 Portfolio",
+                "desc": "Este fue mi sitio web de portafolio de unos años atrás. Fue construido con React y Styled Components. Era mi primer uso de React y todavía estaba aprendiendo las bases.",
+                "tags": [
+                    "react",
+                    "html",
+                    "css"
+                ]
+            },
+            {
+                "title": "Proyectos de Código Creativo",
+                "url": "https://codepen.io/bcantrell1",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741925641/Screenshot_2025-03-13_211333_lhm1pd.png",
+                "imgAlt": "Home page of Creative Coding",
+                "desc": "Este es un recopilación de proyectos de código creativo que he realizado a lo largo de los años. He estado programando durante varios años y he aprendido mucho. También he aprendido mucho sobre código creativo y cómo usar la API de canvas entre otras herramientas.",
+                "tags": [
+                    "p5.js",
+                    "canvas",
+                    "html",
+                    "css"
                 ]
             }
         ]

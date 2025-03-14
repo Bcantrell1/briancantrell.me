@@ -2,7 +2,7 @@ import React from 'react';
 import FacebookIcon from './svg/FacebookIcon';
 import GithubIcon from './svg/GithubIcon';
 import socialData from '../config/data.json';
-import styles from './Footer.module.scss';
+import styles from './footer.module.scss';
 import Link from 'next/link';
 import InstagramIcon from './svg/InstaIcon';
 
