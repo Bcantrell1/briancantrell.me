@@ -31,7 +31,7 @@
                 "title": "Cosmic Hall",
                 "url": "https://www.cosmic-hall.com/",
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
-                "imgAlt": "",
+                "imgAlt": "Home page of Cosmic Hall",
                 "desc": "Virtual classroom intended to teach the basics of the cosmos. Topics related to common misunderstandings and the basics surrounding the industry. ",
                 "tags": [
                     "html",
@@ -44,12 +44,40 @@
                 "title": "SGM Scapes",
                 "url": "https://www.sgmscapes.com/",
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
-                "imgAlt": "",
+                "imgAlt": "Home page of SGM Scapes",
                 "desc": "A website for a local landscaping | hardscaping company. It features your standard pages as well a custom wizard for estimating projects. Other goodies include a news area and a carousel.",
                 "tags": [
                     "html",
                     "css",
                     "react"
+                ]
+            },
+            {
+                "title": "Dota 2 Analytics",
+                "url": "https://dongalyticsv2.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741911853/dongpng_rr0vra.png",
+                "imgAlt": "Home page of Dota 2 Analytics",
+                "desc": "A dashboard for viewing Dota 2 statistics and analytics for the turbo game mode. This was built originally for a friend's guild but became a job for a discord group so I kept it up to date.",
+                "tags": [
+                    "html",
+                    "css",
+                    "react",
+                    "ts"
+                ]
+            },
+            {
+                "title": "Automatit Inc.",
+                "url": "https://automatit.net/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741912187/Screenshot_2025-03-13_172930_o5s1om.png",
+                "imgAlt": "Home page of Automatit Inc.",
+                "desc": "This was a full custom website built for my previous employer. Built with codeigniter(PHP) and a custom CMS. It features ~28 pages of custom content amongst various other features.",
+                "tags": [
+                    "php",
+                    "codeigniter",
+                    "mysql",
+                    "html",
+                    "css",
+                    "js"
                 ]
             }
         ]

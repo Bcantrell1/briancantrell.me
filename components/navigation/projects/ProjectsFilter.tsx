@@ -37,7 +37,7 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
         <div className={styles.filteredProjects}>
             {filteredProjects.map((project: Project) => (
             <div key={project.title} className={styles.projectCard}>
-              <h3 className={styles.cardTitle}>{project.title}</h3>
+              <h3 className={styles.cardTitle}>/* {project.title} */</h3>
               <div className={styles.cardContent}>
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                     {
@@ -47,9 +47,11 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
                     }
                 </a>
                 <p>{project.desc}</p>
-                <button className={`${styles.projectLink} ${styles.buttonStyle} ${styles.default}`}>
-                  <Link target="_blank" rel="noopener noreferrer" href={project.url}>View Project</Link>
-                </button>
+                <Link target="_blank" rel="noopener noreferrer" href={project.url}>
+                    <button className={`${styles.projectLink} ${styles.buttonStyle} ${styles.default}`}>
+                        View Project
+                    </button>
+                </Link>
               </div>
             </div>
           ))}

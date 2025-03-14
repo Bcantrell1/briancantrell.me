@@ -23,6 +23,7 @@ const Projects = () => {
     { title: 'css', imgAlt: 'css icon', isActive: true },
     { title: 'react', imgAlt: 'React icon', isActive: true },
     { title: 'ts', imgAlt: 'Typescript icon', isActive: true },
+    { title: 'php', imgAlt: 'php icon', isActive: true },
   ]);
 
   const activeItems = useMemo(

@@ -4,7 +4,7 @@ import CSSIcon from '@/components/svg/CSSIcon';
 import ReactIcon from '@/components/svg/ReactIcon';
 import TSIcon from '@/components/svg/TSIcon';
 import HTMLIcon from '@/components/svg/HTMLIcon';
-
+import PHPIcon from '@/components/svg/PHPIcon';
 interface ProjectItem {
   title: string;
   imgAlt: string;
@@ -22,6 +22,7 @@ const componentMap: { [key: string]: React.ComponentType<any> } = {
   css: CSSIcon,
   react: ReactIcon,
   ts: TSIcon,
+  php: PHPIcon,
 };
 
 const ProjectsSide: React.FC<ProjectsSideProps> = ({ list, isSidebarHidden, onToggleActive }) => {

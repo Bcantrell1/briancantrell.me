@@ -75,7 +75,20 @@
 				margin-bottom: 0;
 				padding-bottom: 20px;
 			}
+
+			@media (max-width: 945px) {
+				margin: 5px;
+			}
 		}
+	}
+
+	@media (max-width: 945px) {
+		width: 169px;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+		height: auto;
 	}
 }
 
