@@ -16,6 +16,14 @@
 				"imgAlt": "",
 				"desc": "Hit me up on Github",
 				"container-class": "github"
+			},
+			{
+				"social-title": "instagram",
+				"url": "https://www.instagram.com/trell546/",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Instagram",
+				"container-class": "instagram"
 			}
 		]
 	},

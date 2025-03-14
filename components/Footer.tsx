@@ -4,9 +4,10 @@ import GithubIcon from './svg/GithubIcon';
 import socialData from '../config/data.json';
 import styles from './Footer.module.scss';
 import Link from 'next/link';
+import InstagramIcon from './svg/InstaIcon';
 
 const { socialLinks } = socialData[0];
-const [facebookLink, githubLink] = socialLinks?.map((link: any) => link.url) || [];
+const [facebookLink, githubLink, instagramLink] = socialLinks?.map((link: any) => link.url) || [];
 
 const Footer = ({ style }: { style?: React.CSSProperties }) => {
 	return (
@@ -14,11 +15,16 @@ const Footer = ({ style }: { style?: React.CSSProperties }) => {
 			<div className={styles.container}>
 				<p>Hit me up:</p>
 				<div className={styles.social}>
-					<div className={styles.facebook}>
-						<Link aria-label="go to my facebook page" href={facebookLink}>
+					<Link target='_blank' aria-label="go to my facebook page" href={facebookLink}>
+						<div className={styles.facebook}>
 							<FacebookIcon className={styles.svg} />
-						</Link>
-					</div>
+						</div>
+					</Link>
+					<Link target='_blank' aria-label="go to my instagram page" href={instagramLink}>
+						<div className={styles.instagram}>
+							<InstagramIcon className={styles.svg} />
+						</div>
+					</Link>
 				</div>
 				<div className={styles.github} tabIndex={0}>
 					<p><Link target='_blank' href={githubLink}>@bcantrell1</Link></p>
