@@ -70,7 +70,7 @@
                 "url": "https://automatit.net/",
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741912187/Screenshot_2025-03-13_172930_o5s1om.png",
                 "imgAlt": "Home page of Automatit Inc.",
-                "desc": "This was a full custom website built for my previous employer. Built with codeigniter(PHP) and a custom CMS. It features ~28 pages of custom content amongst various other features.",
+                "desc": "Fully custom site as the lead developer for my previous employers main site. Built with codeigniter(PHP) and a custom CMS. The project features ~28 pages of custom content and logic alongside and admin panel for marketing and sales.",
                 "tags": [
                     "php",
                     "codeigniter",
@@ -78,6 +78,31 @@
                     "html",
                     "css",
                     "js"
+                ]
+            },
+            {
+                "title": "Old 2022 Portfolio",
+                "url": "https://2022-portfolio-bcantrell1.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/t_Banner 16:9/v1741924952/Screenshot_2025-03-13_210216_lkkdox.png",
+                "imgAlt": "Home page of my old 2022 Portfolio",
+                "desc": "This was my portfolio site from a few years ago. It was built with React and Styled Components. This was my first time using React and I was still learning the ropes.",
+                "tags": [
+                    "react",
+                    "html",
+                    "css"
+                ]
+            },
+            {
+                "title": "Creative Coding Projects",
+                "url": "https://codepen.io/bcantrell1",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741925641/Screenshot_2025-03-13_211333_lhm1pd.png",
+                "imgAlt": "Home page of Creative Coding",
+                "desc": "This is a collection of creative coding projects I've done over the years. I've been coding for a few years now and I've learned a lot. I've also learned a lot about creative coding and how to use the canvas API among other tool sets.",
+                "tags": [
+                    "p5.js",
+                    "canvas",
+                    "html",
+                    "css"
                 ]
             }
         ]
