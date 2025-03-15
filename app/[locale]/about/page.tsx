@@ -1,6 +1,7 @@
-import { useTranslations } from "next-intl";
+import { redirect } from 'next/navigation';
+import { useLocale } from 'next-intl';
 
 export default function AboutPage() {
-    const t = useTranslations('AboutPage');
-    return <div>{t('title')}</div>;
+	const locale = useLocale();
+	redirect(`/${locale}/about/personal`);
 }

@@ -1,0 +1,151 @@
+@use '../../../scss/' as *;
+
+.aboutMe {
+	@include mainMiddleSettings;
+
+	@media screen and (max-width: 768px) {
+		@include phone-borders;
+	}
+
+	@media screen and (max-width: 945px) {
+		overflow-y: scroll;
+		padding-bottom: 10vh;
+	}
+
+	aside {
+		width: 300px;
+		display: flex;
+
+		@media screen and (max-width: 945px) {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: calc(100vw - 30px);
+		}
+
+		.tab {
+			position: absolute;
+			display: inline-flex;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+			width: 60px;
+			border-right: 1px solid $lines;
+
+			@media screen and (max-width: 945px) {
+				display: none;
+			}
+
+			.tabIcon {
+				margin: 10px;
+				cursor: pointer;
+				width: 24px;
+
+				&:hover,
+				&.active {
+					filter: brightness(4);
+					opacity: 0.9;
+				}
+			}
+		}
+
+		.lists {
+			left: 60px;
+			width: 240px;
+			position: relative;
+			display: inline-block;
+
+			@media screen and (max-width: 945px) {
+				left: 0;
+			}
+
+			.hobbiesBar {
+				margin-left: 30px;
+				opacity: 1;
+				visibility: visible;
+				transition:
+					opacity 0.5s ease,
+					visibility 0.5s ease;
+
+				&.hidden {
+					opacity: 0;
+					visibility: hidden;
+					transition:
+						opacity 0.5s ease,
+						visibility 0.5s ease;
+				}
+
+				span {
+					margin: 10px;
+					width: fit-content;
+				}
+
+				>div {
+					display: flex;
+					align-items: center;
+
+					&:hover {
+						color: $secondary4;
+						cursor: pointer;
+					}
+
+					&.active {
+						color: $secondary4;
+					}
+				}
+			}
+		}
+	}
+
+	.personalContact {
+		position: relative;
+		margin-left: 25px;
+		opacity: 1;
+		visibility: visible;
+		transition:
+			opacity 0.5s ease,
+			visibility 0.5s ease;
+
+		@media screen and (max-width: 768px) {
+			width: calc(100vw - 57px);
+		}
+
+		&.hidden {
+			opacity: 0;
+			visibility: hidden;
+			transition:
+				opacity 0.5s ease,
+				visibility 0.5s ease;
+		}
+
+		p {
+			margin: 10px;
+			cursor: pointer;
+			width: fit-content;
+
+			@media screen and (max-width: 768px) {
+				width: 100%;
+			}
+
+			&:hover {
+				color: $secondary4;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.emailIcon,
+	.copyIcon {
+		font-family: 'secret sauce';
+		font-style: normal;
+	}
+
+	.emailIcon::before {
+		content: '\f0e0';
+	}
+
+	.copyIcon::before {
+		content: '\f0c5';
+	}
+}

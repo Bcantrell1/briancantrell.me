@@ -23,7 +23,20 @@
         "again": "Start-again"
     },
     "AboutPage": {
-        "title": "About"
+        "title": "About",
+        "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home.",
+        "personal": {
+            "title": "Personal",
+            "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home."
+        },
+        "professional": {
+            "title": "Professional",
+            "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home."
+        },
+        "hobbies": {
+            "title": "Hobbies",
+            "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home."
+        }
     },
     "NotFound": {
         "pageNotFound": "This page is not found",

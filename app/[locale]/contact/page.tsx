@@ -6,6 +6,7 @@ import FoldableTab from '@/components/global/FoldableTab';
 import styles from './contact.module.scss';
 import { Mail, Copy, ExternalLink } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
+import userData from '@/config/data.json';
 
 export default function ContactPage() {
   const [isContactHidden, setIsContactHidden] = useState(false);
@@ -14,7 +15,8 @@ export default function ContactPage() {
   const [socialsDisplay, setSocialsDisplay] = useState('block');
   const [showIcon, setShowIcon] = useState([false, false]);
 
-  const contInfo = ['cantrellbrian546@gmail.com'];
+  const user = userData[0];
+  const contInfo = [user.email];
 
   const toggleContact = () => {
     if (isContactHidden) {
@@ -69,26 +71,18 @@ export default function ContactPage() {
           className={`${styles.personalSocials} ${isSocialsHidden ? styles.hidden : ''}`}
         >
           <ul>
-            <li>
-              <ExternalLink color="currentColor" size={20} />
-              <Link
-                aria-label="check out my css battle page"
-                href="https://cssbattle.dev/player/ziggy"
-                className={styles.externalLink}
-              >
-                Css Battle
-              </Link>
-            </li>
-            <li>
-              <ExternalLink color="currentColor" size={20} />
-              <Link
-                aria-label="check out my code wars profile"
-                href="https://www.codewars.com/users/bribri546"
-                className={styles.externalLink}
-              >
-                CodeWars
-              </Link>
-            </li>
+            {user.socialLinks?.map((social, index) => (
+              <li key={index}>
+                <ExternalLink color="currentColor" size={20} />
+                <Link
+                  aria-label={`check out my ${social['social-title']} page`}
+                  href={social.url}
+                  className={styles.externalLink}
+                >
+                  {social['social-title'].charAt(0).toUpperCase() + social['social-title'].slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </aside>

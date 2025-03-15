@@ -23,7 +23,20 @@
         "again": "Comenzar de nuevo"
     },
     "AboutPage": {
-        "title": "Acerca de"
+        "title": "Acerca de",
+        "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar.",
+        "personal": {
+            "title": "Personal",
+            "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar."
+        },
+        "professional": {
+            "title": "Profesional",
+            "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar."
+        },
+        "hobbies": {
+            "title": "Hobbies",
+            "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar."
+        }
     },
     "NotFound": {
         "pageNotFound": "Página no encontrada",
