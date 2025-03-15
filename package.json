@@ -6,11 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "@libsql/client": "^0.14.0",
     "animate.css": "^4.1.1",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.40.0",
     "lucide-react": "^0.479.0",
     "next": "15.2.2",
     "next-intl": "^4.0.1",
@@ -18,6 +24,7 @@
     "particles.js": "^2.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-fox-toast": "^1.10.15",
     "sass": "^1.85.1"
   },
   "devDependencies": {
@@ -25,6 +32,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.30.5",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "typescript": "^5"
