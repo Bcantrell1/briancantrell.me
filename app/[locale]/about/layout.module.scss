@@ -2,9 +2,11 @@
 
 .aboutMe {
 	@include mainMiddleSettings;
+	display: flex;
 
 	@media screen and (max-width: 768px) {
 		@include phone-borders;
+		flex-direction: column;
 	}
 
 	@media screen and (max-width: 945px) {

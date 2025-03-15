@@ -63,7 +63,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <FoldableTab onToggle={toggleSocials}>
+        <FoldableTab hasLine={true} onToggle={toggleSocials}>
           <p>find-me-here</p>
         </FoldableTab>
         <div

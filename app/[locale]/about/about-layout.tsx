@@ -12,7 +12,6 @@ import {
 	Circle, 
 	Gamepad, 
 	Folder, 
-	FileText,
 	CheckCircle,
 } from 'lucide-react';
 
@@ -62,33 +61,77 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 		}
 	];
 
-	const hobbiesObj: HobbyInfo[] = [
-		{ 
-			title: 'bio', 
-			icon: <Folder size={20} color="#e74c3c" />, 
-			iconAlt: 'red folder' 
-		},
-		{ 
-			title: 'interests', 
-			icon: <Folder size={20} color="#2ecc71" />, 
-			iconAlt: 'green folder' 
-		},
-		{ 
-			title: 'education', 
-			icon: <Folder size={20} color="#9b59b6" />, 
-			iconAlt: 'purple folder' 
-		},
-		{ 
-			title: 'other', 
-			icon: <FileText size={20} />, 
-			iconAlt: 'markdown icon' 
-		},
-		{ 
-			title: 'other', 
-			icon: <FileText size={20} />, 
-			iconAlt: 'markdown icon' 
+	// Dynamic navigation items based on current route
+	const getNavItemsByRoute = useCallback(() => {
+		const currentRoute = pathname.split('/').pop() || '';
+		
+		if (currentRoute.includes('professional')) {
+			return [
+				{ 
+					title: 'resume', 
+					icon: <Folder size={20} color="#e74c3c" />, 
+					iconAlt: 'red folder',
+					path: 'resume'
+				},
+				{ 
+					title: 'career', 
+					icon: <Folder size={20} color="#2ecc71" />, 
+					iconAlt: 'green folder',
+					path: 'career'
+				},
+				{ 
+					title: 'contributions', 
+					icon: <Folder size={20} color="#9b59b6" />, 
+					iconAlt: 'purple folder',
+					path: 'contributions'
+				},
+			];
+		} else if (currentRoute.includes('hobbies')) {
+			return [
+				{ 
+					title: 'sports', 
+					icon: <Folder size={20} color="#e74c3c" />, 
+					iconAlt: 'red folder',
+					path: 'sports' 
+				},
+				{ 
+					title: 'travel', 
+					icon: <Folder size={20} color="#2ecc71" />, 
+					iconAlt: 'green folder',
+					path: 'travel'
+				},
+				{ 
+					title: 'lifestyle', 
+					icon: <Folder size={20} color="#9b59b6" />, 
+					iconAlt: 'purple folder',
+					path: 'lifestyle'
+				},
+			];
+		} else {
+			return [
+				{ 
+					title: 'bio', 
+					icon: <Folder size={20} color="#e74c3c" />, 
+					iconAlt: 'red folder',
+					path: 'bio'
+				},
+				{ 
+					title: 'interests', 
+					icon: <Folder size={20} color="#2ecc71" />, 
+					iconAlt: 'green folder',
+					path: 'interests'
+				},
+				{ 
+					title: 'milestones', 
+					icon: <Folder size={20} color="#9b59b6" />, 
+					iconAlt: 'purple folder',
+					path: 'milestones'
+				},
+			];
 		}
-	];
+	}, [pathname]);
+
+	const navItems = getNavItemsByRoute();
 
 	const user = userData[0];
 	const contInfo = [user.email, user.phone];
@@ -122,12 +165,31 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 		router.push(`/${locale}/about/${icons[index].path}`);
 	}, [icons, locale, router]);
 
-	const setActiveHobby = (index: number) => {
-		setActiveHobbyIndex(index);
+	// Add a function to check if a nav item is active
+	const isNavItemActive = useCallback((itemPath: string) => {
+		const currentPath = pathname.split('/').pop() || '';
+		return currentPath.includes(itemPath);
+	}, [pathname]);
+
+	const setActiveHobby = (itemPath: string) => {
+		// Get current main route
+		const mainRoute = pathname.split('/').slice(0, -1).join('/');
+		const currentRoute = pathname.split('/').pop() || '';
+		
+		// Check if we're already on a subpage
+		const isOnSubPage = navItems.some(item => currentRoute.includes(item.path));
+		
+		// Construct the new route
+		const baseRoute = isOnSubPage 
+			? mainRoute 
+			: pathname;
+			
+		// Navigate to the selected sub-route
+		router.push(`${baseRoute}/${itemPath}`);
 	};
 
 	const checkScreenSize = useCallback(() => {
-		setIsMobile(window.innerWidth < 946);
+		setIsMobile(window.innerWidth < 768);
 	}, []);
 
 	useEffect(() => {
@@ -175,14 +237,14 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 						style={{ display: hobbiesDisplay }}
 						className={`${styles.hobbiesBar} ${isHobbiesHidden ? styles.hidden : ''}`}
 					>
-						{hobbiesObj.map((hobby, index) => (
+						{navItems.map((item, index) => (
 							<div
 								key={index}
-								className={activeHobbyIndex === index ? styles.active : ''}
-								onClick={() => setActiveHobby(index)}
+								className={isNavItemActive(item.path) ? styles.active : ''}
+								onClick={() => setActiveHobby(item.path)}
 							>
-								<span>{hobby.icon}</span>
-								<p>{hobby.title}</p>
+								<span>{item.icon}</span>
+								<p>{item.title}</p>
 							</div>
 						))}
 					</div>
