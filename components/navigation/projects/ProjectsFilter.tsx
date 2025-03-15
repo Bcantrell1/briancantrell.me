@@ -49,7 +49,7 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
                 <p>{project.desc}</p>
                 <Link target="_blank" rel="noopener noreferrer" href={project.url}>
                     <button className={`${styles.projectLink} ${styles.buttonStyle} ${styles.default}`}>
-                        View Project
+                        view-project
                     </button>
                 </Link>
               </div>
