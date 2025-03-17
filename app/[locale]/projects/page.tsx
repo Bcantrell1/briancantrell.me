@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
-import styles from './Projects.module.scss';
+import styles from './projects.module.scss';
 import ProjectsFilter from '@/components/navigation/projects/ProjectsFilter';
 import SelectTab from '@/components/global/SelectTab';
 import ProjectsNav from '@/components/navigation/projects/ProjectsNav';
