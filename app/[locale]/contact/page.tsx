@@ -4,7 +4,7 @@ import { useState } from 'react';
 import ContactForm from '@/components/contact/ContactForm';
 import FoldableTab from '@/components/global/FoldableTab';
 import styles from './contact.module.scss';
-import { Mail, Copy, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import userData from '@/config/data.json';
 
@@ -13,7 +13,6 @@ export default function ContactPage() {
   const [contactDisplay, setContactDisplay] = useState('block');
   const [isSocialsHidden, setIsSocialsHidden] = useState(false);
   const [socialsDisplay, setSocialsDisplay] = useState('block');
-  const [showIcon, setShowIcon] = useState([false, false]);
 
   const user = userData[0];
   const contInfo = [user.email];
@@ -38,15 +37,6 @@ export default function ContactPage() {
     }
   };
 
-  const openMailTo = (index: number) => {
-    const email = contInfo[index];
-    if (email) {
-      window.location.href = `mailto:${email}`;
-    } else {
-      console.error('Email not found at the specified index');
-    }
-  };
-
   return (
     <div className={styles.aboutMe}>
       <aside>
@@ -57,10 +47,9 @@ export default function ContactPage() {
           style={{ display: contactDisplay }}
           className={`${styles.personalContact} ${isContactHidden ? styles.hidden : ''}`}
         >
-          <p onClick={() => { openMailTo(0); }}>
+          <Link href={`mailto:${contInfo[0]}`}>
             {contInfo[0]}
-            {showIcon[0] && <Mail color="currentColor" />}
-          </p>
+          </Link>
         </div>
 
         <FoldableTab hasLine={true} onToggle={toggleSocials}>
