@@ -17,7 +17,7 @@ interface ProjectsSideProps {
   onToggleActive: (item: ProjectItem) => void;
 }
 
-const componentMap: { [key: string]: React.ComponentType<any> } = {
+const componentMap: { [key: string]: React.ComponentType<React.SVGProps<SVGSVGElement>> } = {
   html: HTMLIcon,
   css: CSSIcon,
   react: ReactIcon,
@@ -41,7 +41,6 @@ const ProjectsSide: React.FC<ProjectsSideProps> = ({ list, isSidebarHidden, onTo
               />
               {SvgComponent && (
                 <SvgComponent
-                  alt={item.imgAlt}
                   className={`${styles.projectSvg} ${item.title}`}
                   onClick={(e: React.MouseEvent<SVGSVGElement>) => e.stopPropagation()}
                 />

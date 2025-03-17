@@ -4,13 +4,18 @@ import GithubIcon from './svg/GithubIcon';
 import socialData from '../config/data.json';
 import styles from './footer.module.scss';
 import Link from 'next/link';
-import InstagramIcon from './svg/InstaIcon';
 import GitLabIcon from './svg/GitlabIcon';
 import CodePenIcon from './svg/CodepenIcon';
 import LinkedinIcon from './svg/LinkedinIcon';
 
+interface SocialLink {
+	url: string;
+	'social-title': string;
+}
+
 const { socialLinks } = socialData[0];
-const [facebookLink, githubLink, gitlabLink, codepenLink, linkedinLink] = socialLinks?.map((link: any) => link.url) || [];
+const [facebookLink, githubLink, gitlabLink, codepenLink, linkedinLink] = socialLinks?.map((link: SocialLink) => link.url) || [];
+
 
 const Footer = ({ style }: { style?: React.CSSProperties }) => {
 	return (
@@ -20,22 +25,22 @@ const Footer = ({ style }: { style?: React.CSSProperties }) => {
 				<div className={styles.social}>
 					<Link target='_blank' aria-label="go to my linkedin page" href={linkedinLink}>
 						<div className={styles.item}>
-							<LinkedinIcon className={styles.svg} />
+							<LinkedinIcon />
 						</div>
 					</Link>
 					<Link target='_blank' aria-label="go to my facebook page" href={facebookLink}>
 						<div className={styles.item}>
-							<FacebookIcon className={styles.svg} />
+							<FacebookIcon />
 						</div>
 					</Link>
 					<Link target='_blank' aria-label="go to my gitlab page" href={gitlabLink}>
 						<div className={styles.item}>
-							<GitLabIcon className={styles.svg} />
+							<GitLabIcon />
 						</div>
 					</Link>
 					<Link target='_blank' aria-label="go to my codepen page" href={codepenLink}>
 						<div className={styles.item}>
-							<CodePenIcon className={styles.svg} />
+							<CodePenIcon />
 						</div>
 					</Link>
 				</div>

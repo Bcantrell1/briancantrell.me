@@ -3,7 +3,7 @@
 import FoldableTab from '@/components/global/FoldableTab';
 import styles from './aboutSide.module.scss';
 import IconNavigation from '@/components/navigation/about/Tab';
-import NavItems from '@/components/navigation/about/NavItems';
+import NavItems, { NavItem } from '@/components/navigation/about/NavItems';
 import ConnectSection from '@/components/global/ConnectSection';
 
 interface AboutSideProps {
@@ -14,7 +14,7 @@ interface AboutSideProps {
     isMobile: boolean;
     hobbiesDisplay: string;
     contactDisplay: string;
-    navItems: any[];
+    navItems: NavItem[];
     toggleHobbies: () => void;
     toggleContact: () => void;
     setActiveIcon: (index: number) => void;

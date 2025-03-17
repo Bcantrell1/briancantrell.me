@@ -1,9 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
 import styles from './connectSection.module.scss';
-import { CheckCircle } from 'lucide-react';
 
 interface SocialLink {
   url: string;
@@ -25,7 +23,6 @@ export default function ConnectSection({
   display,
   isMobile 
 }: ConnectSectionProps) {
-  const [showIcon, setShowIcon] = useState([false, false]);
   
   const displayEmail = isMobile
     ? email
@@ -38,7 +35,6 @@ export default function ConnectSection({
     >
       <p>
         {displayEmail}
-        {showIcon[0] && <CheckCircle size={16} />}
       </p>
       
       {socialLinks?.map((social, index) => (

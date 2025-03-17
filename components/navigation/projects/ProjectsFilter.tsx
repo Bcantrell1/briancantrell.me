@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import styles from './ProjectsFilter.module.scss';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FilteredProjectsProps {
   activeItems: string[];
@@ -37,12 +38,14 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
         <div className={styles.filteredProjects}>
             {filteredProjects.map((project: Project) => (
             <div key={project.title} className={styles.projectCard}>
-              <h3 className={styles.cardTitle}>/* {project.title} */</h3>
+              <h3 className={styles.cardTitle}>{project.title}</h3>
               <div className={styles.cardContent}>
                 <a href={project.url} target="_blank" rel="noopener noreferrer">
                     {
                         project.img && (
-                            <img src={project.img} alt={project.title} />
+                          <div className={styles.imageContainer}>
+                            <Image src={project.img} alt={project.title} fill />
+                          </div>
                         )
                     }
                 </a>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
 import styles from './layout.module.scss';
@@ -32,7 +32,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 	const [hobbiesDisplay, setHobbiesDisplay] = useState('block');
 	const [contactDisplay, setContactDisplay] = useState('none');
 
-	const icons: IconInfo[] = [
+	const icons: IconInfo[] = useMemo(() => [
 		{ 
 			icon: <Terminal size={24} />, 
 			iconAlt: 'terminal', 
@@ -48,7 +48,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 			iconAlt: 'gamepad', 
 			path: 'hobbies' 
 		}
-	];
+	], []);
 
 	const getNavItemsByRoute = useCallback(() => {
 		const currentRoute = pathname.split('/').pop() || '';
@@ -152,19 +152,6 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
 		const currentPath = pathname.split('/').pop() || '';
 		return currentPath.includes(itemPath);
 	}, [pathname]);
-
-	const setActiveHobby = (itemPath: string) => {
-		const mainRoute = pathname.split('/').slice(0, -1).join('/');
-		const currentRoute = pathname.split('/').pop() || '';
-		
-		const isOnSubPage = navItems.some(item => currentRoute.includes(item.path));
-		
-		const baseRoute = isOnSubPage 
-			? mainRoute 
-			: pathname;
-			
-		router.push(`${baseRoute}/${itemPath}`);
-	};
 
 	const checkScreenSize = useCallback(() => {
 		setIsMobile(window.innerWidth < 768);

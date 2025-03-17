@@ -1,14 +1,12 @@
 'use client';
 
-import { useTranslations, useMessages } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import styles from './interests.module.scss';
 
 export default function InterestsPage() {
 	const t = useTranslations('AboutPage.personal.interests');
-	const messages = useMessages();
 
-	// Get all interest keys from the messages
 	const interestKeys = [
 		'golf',
 		'lakeLife',

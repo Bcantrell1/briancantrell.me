@@ -1,5 +1,4 @@
 'use client';
-import LangToggle from "./LangToggle";
 import React, { useState, useRef, useEffect } from 'react';
 import Footer from './Footer';
 import { Link, usePathname } from "@/i18n/navigation";

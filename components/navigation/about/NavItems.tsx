@@ -2,7 +2,7 @@
 
 import styles from './navItems.module.scss';
 
-interface NavItem {
+export interface NavItem {
   title: string;
   icon: React.ReactNode;
   iconAlt: string;

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { toast } from 'react-fox-toast';
 import { submitForm } from '@/lib/actions';
 import styles from './contactform.module.scss';
+import Image from 'next/image';
 
 function formatDate(inputDate: Date): string {
   const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -30,7 +31,6 @@ function formatDate(inputDate: Date): string {
 }
 
 export default function ContactForm() {
-  // Form state
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -38,7 +38,6 @@ export default function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  // Update date every second
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDate(new Date());
@@ -46,7 +45,6 @@ export default function ContactForm() {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isLoading) return;
@@ -69,7 +67,6 @@ export default function ContactForm() {
     }
   };
 
-  // Reset form
   const resetForm = () => {
     setIsSubmitted(false);
     setName('');
@@ -81,7 +78,7 @@ export default function ContactForm() {
     <main className={styles.cont}>
       {isSubmitted ? (
         <div className={styles.thankYou}>
-          <img src="/thanks.svg" alt="thank you message icon" />
+          <Image src="/thanks.svg" alt="thank you message icon" width={100} height={100} />
           <p>I will get back to you as soon as possible!</p>
           <button className={`${styles.buttonStyle} ${styles.default}`} onClick={resetForm}>send-new-message</button>
         </div>
@@ -131,7 +128,7 @@ export default function ContactForm() {
             <span>document</span>
             <span>.</span>
             <span>querySelector</span>
-            <span>'#sendBtn'</span>
+            <span>&apos;#sendBtn&apos;</span>
           </div>
         </div>
         <div className={styles.messageToJson}>
