@@ -6,7 +6,7 @@ export default function ProfessionalPage() {
 
 	return (
 		<div className={styles.professionalInfo}>
-			<h1>professional page is under construction</h1>
+			<h1>Still working on the professional page 😅</h1>
 		</div>
 	);
 }

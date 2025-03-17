@@ -23,7 +23,6 @@
 		width: calc(100% - 20px);
 	}
 
-
 	h1,
 	h2,
 	h3 {
@@ -41,7 +40,7 @@
 
 	h2 {
 		font-size: 1.5rem;
-		margin-top: 2rem;
+		margin-top: 0;
 	}
 
 	p {
@@ -93,4 +92,88 @@
 		font-style: italic;
 		margin: 1rem 0;
 	}
+}
+
+.mainDescription {
+	font-size: 1.1rem;
+	margin-bottom: 2rem;
+}
+
+.interestsList {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	margin: 2rem 0;
+}
+
+.interestSection {
+	display: flex;
+	gap: 2rem;
+	position: relative;
+	padding-bottom: 2rem;
+	
+	&:not(:last-child)::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		right: 10%;
+		height: 1px;
+		background-color: $lines;
+	}
+	
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.evenSection {
+	flex-direction: row;
+	
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.oddSection {
+	flex-direction: row-reverse;
+	
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.interestContent {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	h2 {
+		color: $accent1;
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+	
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.imageContainer {
+	flex: 1;
+	position: relative;
+	border-radius: 8px;
+	overflow: hidden;
+	min-height: 250px;
+	height: auto;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	border: 1px solid $lines;
+}
+
+.interestImage {
+	width: 100%;
+	height: auto !important; 
+	object-fit: contain;
+	position: relative !important;
 }

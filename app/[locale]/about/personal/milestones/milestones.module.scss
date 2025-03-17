@@ -12,6 +12,10 @@
     padding: 20px 5px;
     height: calc(100vh - 120px);
   }
+  
+  :global(.vertical-timeline) {
+    overflow: visible;
+  }
 }
 
 .milestonesContent {
@@ -65,7 +69,6 @@
     }
   }
   
-  // Timeline styling
   h2 + p {
     position: relative;
     padding-left: 20px;
@@ -92,4 +95,46 @@
       background-color: $accent1;
     }
   }
+}
+
+.customTimeline {
+  --lines-color: #{$lines};
+  
+  :global(.vertical-timeline-element-title) {
+    color: $secondary4;
+  }
+  
+  :global(.vertical-timeline-element-subtitle) {
+    color: $secondary3;
+  }
+
+  :global(.vertical-timeline-element-icon) {
+    border: 2px solid $secondary3;
+    box-shadow: none !important;
+  }
+
+  :global(.vertical-timeline-element-date) {
+    color: $accent1;
+    font-weight: bold;
+    font-size: 1.2rem !important;
+    
+    @media screen and (max-width: 945px) {
+      margin-top: 0.5rem;
+      color: $accent1;
+    }
+  }
+  
+  :global(.vertical-timeline-element-content) {
+    padding: 1.5rem;
+    
+    p {
+      color: $secondary1;
+    }
+  }
+}
+
+.timelineTitle {
+  color: $secondary3;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
 }

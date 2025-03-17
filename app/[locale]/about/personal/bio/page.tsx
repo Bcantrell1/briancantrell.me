@@ -1,19 +1,19 @@
 'use client';
 
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useMessages } from 'next-intl';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-dark.css';
 import styles from './personal.module.scss';
-import { parseBioText } from '@/lib/helpers';
 
 export default function PersonalPage() {
-	const t = useTranslations('AboutPage.personal');
+	const t = useTranslations('AboutPage.personal.bio');
+	const messages = useMessages();
+
 	const codeBlock = useRef<HTMLElement>(null);
 	const bioContainer = useRef<HTMLDivElement>(null);
 
-	// Calculate duration since start date
 	const startDate = new Date('2021-11-08');
 	const currentDate = new Date();
 	const diffInMs = currentDate.getTime() - startDate.getTime();
@@ -22,128 +22,64 @@ export default function PersonalPage() {
 		(diffInMs % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44),
 	);
 
-	const bio = `
-I have been programming professionally for ${diffInYears} years and ${diffInMonths} months. I spent 4 years at Grand Canyon University learning the fundamentals of computer science.
-
-Since then, I've gained solid expertise in:
-🎨 **Front End Development**: Mastered HTML5, CSS3, and JavaScript to build dynamic, responsive websites. I then expanded into **React.js **, to create sophisticated front-end applications.
-
-🧙‍♂️ **Back End Development**: I then expanded into **Node.js **, to create sophisticated back-end applications.
-
-🗄️ **Database Management**: I then expanded into **MySQL **, to create sophisticated database applications.
-
-🛠️ **DevOps**: I then expanded into **Docker **, to create sophisticated container applications.
-
-`;
-
-	const formattedBio = useMemo(() => parseBioText(bio), [bio]);
-
-	// Drag handling state and functions
-	const [isDragging, setIsDragging] = useState(false);
-	const [startY, setStartY] = useState(0);
-	const [scrollTop, setScrollTop] = useState(0);
-
-	const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
-		if (window.innerWidth < 768) return;
-		setIsDragging(true);
-		bioContainer.current?.classList.add(styles.grabbing);
-		setStartY(event.pageY);
-		setScrollTop(bioContainer.current?.scrollTop || 0);
-	};
-
-	const handleMouseMove = (event: MouseEvent) => {
-		if (window.innerWidth < 768 || !isDragging || !bioContainer.current) return;
-		const y = event.pageY;
-		bioContainer.current.scrollTop = scrollTop - (y - startY);
-	};
-
-	const handleMouseUp = () => {
-		if (window.innerWidth < 768) return;
-		setIsDragging(false);
-		bioContainer.current?.classList.remove(styles.grabbing);
-	};
-
 	useEffect(() => {
 		if (codeBlock.current) {
 			hljs.highlightElement(codeBlock.current);
 		}
+	}, []);
 
-		const handleGlobalMouseMove = (e: MouseEvent) => {
-			if (isDragging) {
-				handleMouseMove(e);
-			}
-		};
-
-		const handleGlobalMouseUp = () => {
-			if (isDragging) {
-				handleMouseUp();
-			}
-		};
-
-		window.addEventListener('mousemove', handleGlobalMouseMove);
-		window.addEventListener('mouseup', handleGlobalMouseUp);
-
-		return () => {
-			window.removeEventListener('mousemove', handleGlobalMouseMove);
-			window.removeEventListener('mouseup', handleGlobalMouseUp);
-		};
-	}, [isDragging]);
+	const subDescriptionKeys = Object.keys(messages.AboutPage.personal.bio.subDescription);
 
 	return (
-		<div className={styles.splitInHalf}>
-			<div
-				ref={bioContainer}
-				className={styles.personalBio}
-				onMouseDown={handleMouseDown}
-			>
-				{formattedBio.map((line, index) => (
-					<p key={index}>
-						{line.map((segment, i) => (
-							<span
-								key={i}
-								className={segment.isBold ? styles.boldText : ''}
-							>
-								{segment.text}
-							</span>
-						))}
-					</p>
-				))}
-			</div>
-
-			<div className={styles.codeSnippet}>
-				<div className={styles.codeAuthor}>
-					<Image
-						src="/me.png"
-						alt="personal-img"
-						width={40}
-						height={40}
-						className={styles.miImagen}
-					/>
-					<div className={styles.authAside}>
-						<p>@bcantrell1</p>
-					</div>
+		<div className={styles.bioContainer}>
+			<h1>{t('title')}</h1>
+			<div className={styles.splitInHalf}>
+				<div
+					ref={bioContainer}
+					className={styles.personalBio}
+				>
+					<p>{t('description', { diffInYears, diffInMonths })}</p>
+					<p>{t('subTitle')}</p>
+					{subDescriptionKeys.map((key) => (
+						<p key={key}>{t(`subDescription.${key}`)}</p>
+					))}
 				</div>
-				<pre>
-					<code
-						ref={codeBlock}
-						className="javascript"
-					>
-						{`const golfShot = (planet: 'Earth' | 'Moon' | 'Mars') => {
-  const gravity = { Earth: 9.8, Moon: 1.6, Mars: 3.7 }[planet];
-  const distance = 100 / gravity * Math.random();
+
+				<div className={styles.codeSnippet}>
+					<div className={styles.codeAuthor}>
+						<Image
+							src="/me.png"
+							alt="personal-img"
+							width={40}
+							height={40}
+							className={styles.miImagen}
+						/>
+						<div className={styles.authAside}>
+							<p>@bcantrell1</p>
+						</div>
+					</div>
+					<pre>
+						<code
+							ref={codeBlock}
+							className="javascript"
+						>
+							{`const golfShot = (planet: Planet, toHole: Yards): string => {
+  const gravity: number = getGravity(planet);
+  const distance: number = toHole / gravity * Math.random();
   
-  const trouble = {
+  const trouble: Trouble = {
     Earth: 'lake',
     Moon: 'crater',
     Mars: 'canyon'
   };
-  
-  return distance > 10 
-    ? \`Of course I cleared the \${trouble[planet]}!\` 
-    : \`Welp! My ball is lost to \${planet}'s \${trouble[planet]}!\`;
+
+  return distance >= toHole ?
+    \`Shoot! We didnt clear the \${trouble[planet]}!\` 
+    : \`Welp! My ball could be lost to \${planet}'s \${trouble[planet]}!\`;
 };`}
-					</code>
-				</pre>
+						</code>
+					</pre>
+				</div>
 			</div>
 		</div>
 	);
