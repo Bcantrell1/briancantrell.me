@@ -1,0 +1,261 @@
+@use '../../scss/' as *;
+
+.cont {
+	width: calc(100% - 300px);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	position: absolute;
+	top: 0;
+	height: calc(100vh - 180px);
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 80px 10px;
+
+	@media (max-width: 945px) {
+		width: calc(100% - 170px);
+		left: 170px;
+	}
+
+	@media screen and (max-height: 668px) {
+		padding: 30px 10px;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		width: 100%;
+		position: relative;
+		overflow: auto;
+		padding-top: 10px;
+		left: 0;
+		height: 100%;
+	}
+
+	@media (min-width: 945px) {
+		left: 300px;
+	}
+
+	
+	.buttonStyle {
+		font-size: 1rem;
+	}
+
+	.messaging {
+		display: flex;
+		flex-direction: column;
+		align-content: flex-end;
+		max-width: 100%;
+		width: 100%;
+		box-sizing: border-box;
+		height: 100%;
+
+		@media screen and (min-width: 768px) {
+			margin-bottom: 60px;
+			height: calc(100vh - 260px);
+			position: relative;
+			overflow-y: auto;
+			max-width: 550px;
+			padding: 0;
+		}
+
+		>* {
+			margin-bottom: 20px;
+			line-height: 1.6;
+		}
+
+	}
+
+	.thankYou {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		flex-basis: 50%;
+
+		img {
+			width: 300px;
+			margin-bottom: 50px;
+		}
+
+		p {
+			text-align: center;
+			width: 340px;
+			line-height: 1.7;
+		}
+
+		@media (max-width: 768px) {
+			padding-top: 50px;
+
+			p {
+				width: 100%;
+			}
+		}
+	}
+
+	textarea,
+	input[type='text'],
+	input[type='email'] {
+		background: $primary3;
+		border-radius: 5px;
+		border: 2px solid transparent;
+		padding: 10px;
+		color: $secondary1;
+		font-size: 1rem;
+
+		&:focus {
+			outline: none;
+			border: 2px solid $secondary1;
+		}
+
+		&::placeholder {
+			color: $secondary1;
+			opacity: 0.5;
+		}
+
+	}
+
+	textarea {
+		padding-bottom: 30px;
+	}
+
+	button {
+		width: fit-content;
+		padding: 10px;
+	}
+
+	.beautifulResults {
+		font-weight: bold;
+
+		.firstQuery {
+			padding-bottom: 20px;
+
+			>span:first-of-type {
+				color: $accent4;
+			}
+		}
+
+		.messageToJson {
+			>span:first-of-type {
+				color: $accent4;
+			}
+
+			>span:nth-of-type(2) {
+				color: $accent4;
+			}
+
+			>span:nth-of-type(3) {
+				color: $accent5;
+			}
+		}
+
+		.varName,
+		.dataObject .options {
+			color: $secondary3;
+		}
+
+		.varName,
+		.query {
+			display: inline-block;
+			margin-left: 15px;
+		}
+
+		.query {
+			span {
+				&:first-of-type {
+					color: $secondary2;
+				}
+
+				&:nth-of-type(2) {
+					color: $secondary1;
+				}
+
+				&:nth-of-type(3) {
+					color: $secondary3;
+				}
+
+				&:last-of-type {
+					color: $accent1;
+
+					&::before,
+					&::after {
+						color: $secondary1;
+					}
+
+					&::before {
+						content: '(';
+					}
+
+					&::after {
+						content: ')';
+					}
+				}
+			}
+		}
+
+		.dataObject {
+			margin-bottom: 10px;
+
+			@media screen and (min-width: 768px) {
+				margin-bottom: 60px;
+				height: calc(100vh - 260px);
+				position: relative;
+				overflow-y: scroll;
+			}
+
+			.set {
+				display: flex;
+				justify-content: flex-start;
+				align-items: baseline;
+				margin-left: 20px;
+
+				.options {
+					padding-right: 10px;
+
+					&::after {
+						content: ': ';
+						color: $secondary1;
+					}
+				}
+
+				.results {
+					color: $accent1;
+					width: 300px;
+
+					&::before,
+					&::after {
+						content: '"';
+					}
+
+					&.name,
+					&.email {
+						overflow: hidden;
+						max-width: 100%;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+
+					&.message {
+						max-height: 250px;
+						overflow-y: scroll;
+						font-weight: normal;
+					}
+				}
+			}
+
+			&::after {
+				content: '}';
+				color: $accent5;
+			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.beautifulResults {
+			display: none;
+		}
+
+		.messaging {
+			width: 100%;
+			padding: 0 10px;
+		}
+	}
+}

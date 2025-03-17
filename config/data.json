@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Brian Cantrell",
+		"email": "cantrellbrian546@gmail.com",
+		"phone": "+1 (555) 555-5555",
+		"socialLinks": [
+			{
+				"social-title": "facebook",
+				"url": "https://www.facebook.com/1431235861",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Facebook",
+				"container-class": "facebook"
+			},
+			{
+				"social-title": "github",
+				"url": "https://github.com/bcantrell1",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Github",
+				"container-class": "github"
+			},
+			{
+				"social-title": "gitlab",
+				"url": "https://gitlab.com/bcantrell",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Gitlab",
+				"container-class": "instagram"
+			},
+			{
+				"social-title": "codepen",
+				"url": "https://codepen.io/bcantrell1",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Codepen",
+				"container-class": "instagram"
+			},
+			{
+				"social-title": "linkedin",
+				"url": "https://www.linkedin.com/in/bcantrell1/",
+				"img": "",
+				"imgAlt": "",
+				"desc": "Hit me up on Linkedin",
+				"container-class": "instagram"
+			}
+		]
+	},
+	{}
+]

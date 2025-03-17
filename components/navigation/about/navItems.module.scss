@@ -1,0 +1,37 @@
+@use '../../../scss/' as *;
+
+.hobbiesBar {
+    margin-left: 30px;
+    opacity: 1;
+    visibility: visible;
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+
+    &.hidden {
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity 0.5s ease,
+            visibility 0.5s ease;
+    }
+
+    span {
+        margin: 10px;
+        width: fit-content;
+    }
+
+    .hobbyItem {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            color: $secondary4;
+            cursor: pointer;
+        }
+
+        &.active {
+            color: $secondary4;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use '../../scss/' as *;
+
+.navTitled {
+	width: 301px;
+	color: $secondary4;
+	position: relative;
+
+	.line {
+		position: relative;
+		user-select: none;
+		font-family: $main-font;
+		font-weight: bold;
+		letter-spacing: 0.7px;
+	}
+
+	@media (max-width: 945px) {
+		width: 169px;
+	}
+}
+
+@media (min-width: 769px) {
+	.line {
+		width: 1px;
+		top: 30px;
+		left: 339px;
+		position: fixed;
+		display: inline-block;
+		background: $lines;
+		height: calc(100vh - 80px);
+	}
+}
+
+@media (max-width: 945px) {
+
+	.line {
+		left: 208px;
+	}
+}
+
+.foldableTab {
+	display: flex;
+	align-items: center;
+	user-select: none;
+	cursor: pointer;
+
+	@media (max-width: 768px) {
+		background-color: $lines;
+		height: 30px;
+		align-items: center;
+		width: calc(100vw - 30px);
+	}
+
+	>svg {
+		transform: rotate(180deg);
+		transition: transform 0.3s ease-in-out;
+		height: 15px;
+		width: 15px;
+		margin: 0 10px;
+	}
+}
+
+.foldableTab.isFolded>svg {
+	transform: rotate(90deg);
+}

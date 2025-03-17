@@ -1,0 +1,11 @@
+.lists {
+    left: 60px;
+    width: 240px;
+    position: relative;
+    display: inline-block;
+
+    @media screen and (max-width: 945px) {
+        left: 0;
+        width: 169px;
+    }
+}

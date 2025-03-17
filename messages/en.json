@@ -1,0 +1,224 @@
+{
+    "HomePage": {
+        "title": "Brian Cantrell - Full Stack Developer",
+        "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home.",
+        "greeting": "Howdy there, I'm",
+        "name": "Brian Cantrell",
+        "role": "> Software Engineer",
+        "task": "// play my game if you want",
+        "github": "// you can also find it on my Github page",
+        "profile": "github.com/bcantrell1",
+        "pageMobile": "// Find my profile on github",
+        "gameTips_0": "// use keyboard",
+        "gameTips_1": "// arrows to play",
+        "foodLeft": "// food left",
+        "gameCommand": "Start Game",
+        "gameCongratsTitle": "Victory!",
+        "gameCongrats": "Congratulations! You've won the game!",
+        "skip": "Skip",
+        "score": "Score",
+        "scores": "Scores",
+        "hasWon": "Well Done!",
+        "hasNotWon": "Game over!",
+        "again": "Start-again"
+    },
+    "AboutPage": {
+        "title": "About",
+        "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home.",
+        "personal": {
+            "title": "Personal",
+            "bio": {
+                "title": "Bio",
+                "description": "Since 2018 I have been learning the fundamentals of computer science and programming paradigms. The last {diffInYears} years and {diffInMonths} months working professionally in the tech industry and looking for my next challenge.",
+                "subTitle": "I have gained solid expertise in:",
+                "subDescription": {
+                    "0": "🎨 **Front End Development**: Experienced in HTML5, CSS/Scss, and JS/TS in which I have utilized to build dynamic, responsive websites. I have also worked professionally with React, Next.js, and Tailwind CSS.",
+                    "1": "🧙‍♂️ **Back End Development**: I have worked with various different backend stacks including Node.js, PHP, and a little Python and Go. Integration mostly with 3rd party services and APIs as well as creating automated services.",
+                    "2": "🗄️ **Database Management**: I have worked primarily with MySQL although I have utlized some document based databases such as MongoDB on personal projects. Writing raw queries and utilizing ORMs such as Prisma and Drizzle recently.",
+                    "3": "🛠️ **DevOps**: I have worked with Docker and Kubernetes to containerize applications and deploy them in various environments, although I have more to learn still. I have also worked with AWS to deploy and manage services such as S3 buckets, Lambdas, and EC2 instances."
+                }
+            },
+            "interests": {
+                "title": "My Interests",
+                "description": "Frankly more than a guy can keep up with:",
+                "subDescription": {
+                    "0": "🏌️‍♂️ Golf",
+                    "1": "🚤 Lake Life",
+                    "2": "🛵 Motorsports",
+                    "3": "🌱 Traveling",
+                    "4": "🏂 Winter Sports",
+                    "5": "🌌 Space Exploration"
+                },
+                "golf": {
+                    "title": "🏌️‍♂️ Golf",
+                    "description": "I enjoy getting to play golf when I can. I started playing with my father and grandfather when I was young and its something I've always enjoyed. I took things a bit more seriously when I moved to Tucson and started playing with my high school team. Since then I've kept things casual and enjoy watching my friends grow in the game.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742158749/golf_oju6ke.png"
+                },
+                "lakeLife": {
+                    "title": "🚤 Lake Life",
+                    "description": "As I was born and raised in Lake Havasu City, the lake life is something I've always enjoyed. Since moving to Tucson Elephant Butte has become my go to lake as my family owns a house there. Day to day life makes it a challenge, but I put in the work to get there as much as possible.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159197/lake_ktooas.jpg"
+                },
+                "motorsports": {
+                    "title": "🛵 Motorsports",
+                    "description": "From a young age I was always intregued by anything with wheels. Whether that be with a motor or without. Passion driven from my family from all sides. I grew up riding my bike around Lake Havasu City and later on my family got me into dirt bikes. I've been crawling the deserts of Arizona since either on a mtb or a dirt bike. Anything for that matter.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159801/motorsports_efpwdf.jpg"
+                },
+                "traveling": {
+                    "title": "🌱 Traveling",
+                    "description": "I've been fortunate to travel to several places in my life. I've been to a 6 different countries so far and have a few more on my list. I've traveled to several states on top of that mostly with work and some with travel. My favorite place so far would have to be Alaska.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742160214/travel_uwhqsr.jpg"
+                },
+                "winterSports": {
+                    "title": "🏂 Winter Sports",
+                    "description": "While I am a desert rat through and through, I do enjoy the winter sports. I've spent most of my time here in Arizona, either at Snowbowl or Sunrise Ski Resort. However, my favorite to date would have to be Copper Mountain in Colorado.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742161712/winter_lftozb.jpg"
+                },
+                "spaceExploration": {
+                    "title": "🌌 Space Exploration",
+                    "description": "I've always had a fascination with space and the universe. I often find myself researching various modern and historical space exploration topics in my free time. (My youtube algorythm would agree) My love for space is partially what inspired me to pursue a career in software engineering.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742161725/space_jdmo3j.jpg"
+                }
+            },
+            "milestones": {
+                "title": "Personal Milestones",
+                "description": "A timeline of significant moments and achievements in my personal journey:",
+                "2018": {
+                    "title": "2018",
+                    "subTitle": "Started my programming career at Grand Canyon University",
+                    "description": "I started my programming career at Grand Canyon University. The program was a 4 year program that focused on the fundamentals of computer programming/science. The program taught several programming paradigms and concepts that I still use today. The courses utilized a variety of languages including Java, C++, C#, PHP, JavaScript, and SQL."
+                },
+                "2019": {
+                    "title": "2019",
+                    "subTitle": "Started my first job as a Jr. Software Developer",
+                    "description": "I started my first tech job as a Jr. Software Developer at a small company. The role was with the marketing team as a conversion rate optimization specialist. I was able to learn a lot about working in a real-world environment and the importance of data-driven decision making."
+                },
+                "2020": {
+                    "title": "2020",
+                    "subTitle": "Completed First Major Project",
+                    "description": "Built and launched my first complete for-business full stack application. The application was built to manage and automate the onboarding process for new clients. Integrated with over 12 different APIs and 3rd party services."
+                },
+                "2021": {
+                    "title": "2021",
+                    "subTitle": "Career Transition",
+                    "description": "While growing as a jr software developer my current employer noticed my growing skill set and continued hunger for growth and offered me a position as a front end web developer. During this time I worked on a variety of projects including a custom CMS, backend services, and over 200 different client websites."
+                },
+                "2022": {
+                    "title": "2022",
+                    "subTitle": "Graduated from Grand Canyon University",
+                    "description": "I graduated from Grand Canyon University with a Bachelor's degree in Computer Programming/Science. I was able to learn a lot about the fundamentals of computer science and programming paradigms which allowed me to grow as a software engineer."
+                },
+                "2023": {
+                    "title": "2023",
+                    "subTitle": "Married my beautiful wife",
+                    "description": "My wife and I got married in October of 2023. We have been traveling the world and enjoying our time together. Making the most of our time together before the next chapter of our lives begins."
+                }, 
+                "2024": {
+                    "title": "2024",
+                    "subTitle": "Growth as a Software Engineer",
+                    "description": "Promoted in 2023 as a Software Engineer with my previous employer. I was able to learn a lot about the business and marketing side of things. I also was able to learn a lot about the software development lifecycle and working in a variety of environments."
+                },
+                "2025": {
+                    "title": "2025",
+                    "subTitle": "Continued Learning & Job Search",
+                    "description": "I will continue to learn and grow as a software engineer, always seeking new challenges and opportunities to improve my skills. I am currently searching for a new role and will be open to new opportunities in 2025 until I find my new home."
+                }
+            }
+        },
+        "professional": {
+            "title": "Professional",
+            "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home."
+        },
+        "hobbies": {
+            "title": "Hobbies",
+            "description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home."
+        }
+    },
+    "NotFound": {
+        "pageNotFound": "This page is not found",
+        "backToMain": "back to main page",
+        "backToMainArea": "go to main page"
+    },
+    "ProjectsPage": {
+        "projects": [
+            {
+                "title": "Cosmic Hall",
+                "url": "https://www.cosmic-hall.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
+                "imgAlt": "Home page of Cosmic Hall",
+                "desc": "Virtual classroom intended to teach the basics of the cosmos. Topics related to common misunderstandings and the basics surrounding the industry. ",
+                "tags": [
+                    "html",
+                    "css",
+                    "react",
+                    "ts"
+                ]
+            },
+            {
+                "title": "SGM Scapes",
+                "url": "https://www.sgmscapes.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
+                "imgAlt": "Home page of SGM Scapes",
+                "desc": "A website for a local landscaping | hardscaping company. It features your standard pages as well a custom wizard for estimating projects. Other goodies include a news area and a carousel.",
+                "tags": [
+                    "html",
+                    "css",
+                    "react"
+                ]
+            },
+            {
+                "title": "Dota 2 Analytics",
+                "url": "https://dongalyticsv2.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741911853/dongpng_rr0vra.png",
+                "imgAlt": "Home page of Dota 2 Analytics",
+                "desc": "A dashboard for viewing Dota 2 statistics and analytics for the turbo game mode. This was built originally for a friend's guild but became a job for a discord group so I kept it up to date.",
+                "tags": [
+                    "html",
+                    "css",
+                    "react",
+                    "ts"
+                ]
+            },
+            {
+                "title": "Automatit Inc.",
+                "url": "https://automatit.net/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741912187/Screenshot_2025-03-13_172930_o5s1om.png",
+                "imgAlt": "Home page of Automatit Inc.",
+                "desc": "Fully custom site as the lead developer for my previous employers main site. Built with codeigniter(PHP) and a custom CMS. The project features ~28 pages of custom content and logic alongside and admin panel for marketing and sales.",
+                "tags": [
+                    "php",
+                    "codeigniter",
+                    "mysql",
+                    "html",
+                    "css",
+                    "js"
+                ]
+            },
+            {
+                "title": "Old 2022 Portfolio",
+                "url": "https://2022-portfolio-bcantrell1.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/t_Banner 16:9/v1741924952/Screenshot_2025-03-13_210216_lkkdox.png",
+                "imgAlt": "Home page of my old 2022 Portfolio",
+                "desc": "This was my portfolio site from a few years ago. It was built with React and Styled Components. This was my first time using React and I was still learning the ropes.",
+                "tags": [
+                    "react",
+                    "html",
+                    "css"
+                ]
+            },
+            {
+                "title": "Creative Coding Projects",
+                "url": "https://codepen.io/bcantrell1",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741925641/Screenshot_2025-03-13_211333_lhm1pd.png",
+                "imgAlt": "Home page of Creative Coding",
+                "desc": "This is a collection of creative coding projects I've done over the years. I've been coding for a few years now and I've learned a lot. I've also learned a lot about creative coding and how to use the canvas API among other tool sets.",
+                "tags": [
+                    "p5.js",
+                    "canvas",
+                    "html",
+                    "css"
+                ]
+            }
+        ]
+    }
+}

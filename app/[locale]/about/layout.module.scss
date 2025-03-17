@@ -1,0 +1,30 @@
+@use '../../../scss/' as *;
+
+.aboutMe {
+	display: flex;
+	@include mainMiddleSettings;
+
+	@media screen and (max-width: 768px) {
+		@include phone-borders;
+		flex-direction: column;
+	}
+
+	@media screen and (max-width: 945px) {
+		overflow-y: scroll;
+		padding-bottom: 10vh;
+	}
+
+	aside {
+		width: 300px;
+		display: flex;
+
+		@media screen and (max-width: 945px) {
+			width: 170px;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: calc(100vw - 30px);
+			flex-direction: column;
+		}
+	}
+}

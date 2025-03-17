@@ -1,0 +1,223 @@
+{
+    "HomePage": {
+        "title": "Brian Cantrell - Desarrollador Full Stack",
+        "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar.",
+        "greeting": "Hola a todos, soy",
+        "name": "Brian Cantrell",
+        "role": "> Ingeniero de Software",
+        "task": "// juega mi juego si quieres",
+        "github": "// también puedes encontrar en mi página de Github",
+        "profile": "github.com/bcantrell1",
+        "pageMobile": "// Encuentra mi perfil en Github",
+        "gameTips_0": "// usa el teclado",
+        "gameTips_1": "// para jugar",
+        "foodLeft": "// comida restante",
+        "gameCommand": "Comenzar Juego",
+        "gameCongratsTitle": "¡Victoria!",
+        "gameCongrats": "¡Felicidades! Has ganado el juego!",
+        "skip": "Omitir",
+        "score": "Puntuación",
+        "scores": "Puntuaciones",
+        "hasWon": "¡Bien hecho!",
+        "hasNotWon": "¡Juego terminado!",
+        "again": "Comenzar de nuevo"
+    },
+    "AboutPage": {
+        "title": "Acerca de",
+        "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar.",
+        "personal": {
+            "title": "Personal",
+            "bio": {
+                "title": "Bio",
+                "description": "Desde 2018 he estado aprendiendo los fundamentos de la ciencia de la computación y paradigmas de programación. Los últimos {diffInYears} años y {diffInMonths} meses trabajando profesionalmente en la industria de la tecnología y buscando mi siguiente desafío.",
+                "subTitle": "He adquirido una sólida experiencia en:",
+                "subDescription": {
+                    "0": "🎨 **Desarrollo front-end**: Experiencia en HTML5, CSS/Scss y JS/TS, los cuales he utilizado para crear sitios web dinámicos y responsivos. También he trabajado profesionalmente con React, Next.js y Tailwind CSS.",
+                    "1": "🧙‍♂️ **Desarrollo de back-end**: He trabajado con varias pilas de backend diferentes, incluidas Node.js, PHP y un poco de integración con Python y Go, principalmente con servicios y API de terceros, además de crear servicios automatizados.",
+                    "2": "🗄️ **Gestión de bases de datos**: He trabajado principalmente con MySQL aunque he utilizado algunas bases de datos basadas en documentos como MongoDB en proyectos personales. Escribir consultas sin procesar y utilizar ORM como Prisma y Drizzle recientemente.",
+                    "3": "🛠️ **DevOps**: He trabajado con Docker y Kubernetes para contener aplicaciones e implementarlas en varios entornos, aunque todavía tengo más que aprender. También he trabajado con AWS para implementar y administrar servicios como buckets S3, Lambdas e instancias EC2."
+                }
+            },
+            "interests": {
+                "title": "Mis Intereses y Pasiones",
+                "description": "Francamente, más de lo que un hombre puede seguir.",
+                "subDescription": {
+                    "0": "🏌️‍♂️ Golf",
+                    "1": "🚤 Vida en el lago",
+                    "2": "🛵 Motocross",
+                    "3": "🌱 Viajar",
+                    "4": "🏂 Deportes de invierno",
+                    "5": "🌌 Exploración espacial"
+                },
+                "golf": {
+                    "title": "🏌️‍♂️ Golf",
+                    "description": "Disfruto jugar golf cuando puedo. Empecé a jugar con mi padre y abuelo cuando era joven y es algo que he disfrutado siempre. Me tomé las cosas un poco más en serio cuando me mudé a Tucson y empecé a jugar con mi equipo de golf de la escuela secundaria. Desde entonces he mantenido las cosas casuales y disfruto ver a mis amigos crecer en el juego.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742158749/golf_oju6ke.png"
+                },
+                "lakeLife": {
+                    "title": "🚤 Vida en el lago",
+                    "description": "Como nací y crecí en Lake Havasu City, la vida en el lago es algo que he disfrutado siempre. Desde que me mudé a Tucson, Elephant Butte se ha convertido en mi lago favorito. Aunque la vida cotidiana puede ser un desafío, siempre hago lo necesario para estar allí lo más posible.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159197/lake_ktooas.jpg"
+                },
+                "motorsports": {
+                    "title": "🛵 Deportes de motor",
+                    "description": "Desde pequeño, siempre me intrigó todo lo que tuviera ruedas, ya fuera con motor o sin él. Pasión que me inculcó mi familia. Crecí montando en bicicleta por Lake Havasu City y, más tarde, mi familia me aficionó a las motos de cross. Desde entonces, he recorrido los desiertos de Arizona, ya sea en bicicleta de montaña o en moto de cross. En cualquier cosa, en realidad.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159801/motorsports_efpwdf.jpg"
+                },
+                "traveling": {
+                    "title": "🌱 Viajar",
+                    "description": "He tenido la suerte de viajar a varios lugares en mi vida. He estado en seis países diferentes hasta ahora y tengo algunos más en mi lista. Además, he viajado a varios estados, principalmente por trabajo y algunos viajes. Mi lugar favorito hasta ahora es Alaska.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742160214/travel_uwhqsr.jpg"
+                },
+                "winterSports": {
+                    "title": "🏂 Deportes de invierno",
+                    "description": "Aunque soy un auténtico rata del desierto, disfruto mucho de los deportes de invierno. He pasado la mayor parte del tiempo aquí en Arizona, ya sea en Snowbowl o en la estación de esquí Sunrise. Sin embargo, mi favorito hasta la fecha es, sin duda, Copper Mountain en Colorado.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742161712/winter_lftozb.jpg"
+                },
+                "spaceExploration": {
+                    "title": "🌌 Exploración espacial",
+                    "description": "Siempre he tenido una fascinación por el espacio y el universo. A menudo encuentro que me gusta investigar temas relacionados con la exploración espacial moderna y histórica. (Mi algoritmo de YouTube lo sabe) Mi amor por el espacio es parte de lo que me inspiró a perseguir una carrera en ingeniería de software.",
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742161725/space_jdmo3j.jpg"
+                }
+            },
+            "milestones": {
+                "title": "Hitos Personales",
+                "description": "Un cronograma de momentos significativos y logros en mi viaje personal:",
+                "2018": {
+                    "title": "2018",
+                    "subTitle": "Comencé mi carrera como programador en la Universidad del Estado de Arizona",
+                    "description": "La universidad fue un programa de 4 años que se enfocaba en los fundamentos de la programación/ciencia de la computación. El programa enseñó varios paradigmas de programación y conceptos que todavía uso hoy en día. Los cursos utilizaron una variedad de lenguajes incluyendo Java, C++, C#, PHP, JavaScript, y SQL."
+                },
+                "2019": {
+                    "title": "2019",
+                    "subTitle": "Comencé mi primer trabajo como programador",
+                    "description": "Comencé mi primer trabajo como programador en una startup. El rol fue con el equipo de marketing como especialista en optimización de la tasa de conversión. Fue capaz de aprender mucho sobre el trabajo en un entorno real y la importancia de la toma de decisiones basadas en datos."
+                },
+                "2020": {
+                    "title": "2020",
+                    "subTitle": "Completado Primer Proyecto Mayor",
+                    "description": "Construí y lancé mi primer proyecto completo de negocio de pila completa. El proyecto fue construido para gestionar y automatizar el proceso de incorporación de nuevos clientes. Integrado con más de 12 APIs y 3 servicios de terceros."
+                },
+                "2021": {
+                    "title": "2021",
+                    "subTitle": "Transición de Carrera",
+                    "description": "Mientras crecía como programador jr mi antiguo empleador notó mi habilidades y mi deseo de crecimiento y me ofreció un puesto como desarrollador front-end. Durante este tiempo trabajé en una variedad de proyectos incluyendo un CMS personalizado, servicios back-end, y más de 200 sitios web para clientes."
+                },
+                "2022": {
+                    "title": "2022",
+                    "subTitle": "Graduado de la Universidad del Estado de Arizona",
+                    "description": "Gradué de la Universidad del Estado de Arizona con un título en programación/ciencia de la computación. Fue capaz de aprender mucho sobre los fundamentos de la programación y los paradigmas de programación que todavía uso hoy en día."
+                },
+                "2023": {
+                    "title": "2023",
+                    "subTitle": "Casamiento con mi esposa",
+                    "description": "Me casé con mi esposa en octubre de 2023. Hemos estado viajando el mundo y disfrutando de nuestro tiempo juntos. Haciendo lo mejor de nuestro tiempo juntos antes de que comience el siguiente capítulo de nuestra vida."
+                },
+                "2024": {
+                    "title": "2024",
+                    "subTitle": "Crecimiento como programador",
+                    "description": "Fui promovido en 2023 como programador con mi antiguo empleador. Fue capaz de aprender mucho sobre el negocio y el marketing. También fue capaz de aprender mucho sobre el ciclo de desarrollo de software y el trabajo en una variedad de entornos."
+                },
+                "2025": {
+                    "title": "2025",
+                    "subTitle": "Viaje de Aprendizaje Continuo",
+                    "description": "Continuaré aprendiendo y creciendo como programador, siempre buscando nuevos desafíos y oportunidades para mejorar mis habilidades. Estoy actualmente buscando un nuevo rol y estaré abierto a nuevas oportunidades en 2025 hasta que encuentre mi nuevo hogar."
+                }
+            }
+        },
+        "professional": {
+            "title": "Profesional",
+            "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar."
+        },
+        "hobbies": {
+            "title": "Hobbies",
+            "description": "Soy un desarrollador full stack especializado en tecnologías modernas de web. Fui anteriormente ingeniero de software en una startup buscando un lugar para llamar hogar."
+        }
+    },
+    "NotFound": {
+        "pageNotFound": "Página no encontrada",
+        "backToMain": "volver a la página principal",
+        "backToMainArea": "ir a la página principal"
+    },
+    "ProjectsPage": {
+        "projects": [
+            {
+                "title": "Cosmic Hall",
+                "url": "https://www.cosmic-hall.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
+                "imgAlt": "Home page of Cosmic Hall",
+                "desc": "Aula virtual destinada a enseñar los fundamentos del cosmos. Temas relacionados con los malentendidos comunes y los fundamentos que lo rodean.",
+                "tags": [
+                    "html",
+                    "css",
+                    "js"
+                ]
+            },
+            {
+                "title": "SGM Scapes",
+                "url": "https://www.sgmscapes.com/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
+                "imgAlt": "Home page of SGM Scapes",
+                "desc": "Sitio web para una empresa local de paisajismo y hardscaping. Incluye páginas estándar, así como un asistente personalizado para estimar proyectos. También cuenta con un área de noticias y un carrusel.",
+                "tags": [
+                    "html",
+                    "css",
+                    "js"
+                ]
+            },
+            {
+                "title": "Dota 2 Analytics",
+                "url": "https://dongalyticsv2.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741911853/dongpng_rr0vra.png",
+                "imgAlt": "Home page of Dota 2 Analytics",
+                "desc": "Un tablero para ver estadísticas y análisis de Dota 2 en el modo turbo. Este fue creado originalmente para un gremio de Dota 2, pero se convirtió en un trabajo para un grupo de Discord, por lo que lo mantuve actualizado.",
+                "tags": [
+                    "html",
+                    "css",
+                    "react",
+                    "ts"
+                ]
+            },
+            {
+                "title": "Automatit Inc.",
+                "url": "https://automatit.net/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741912187/Screenshot_2025-03-13_172930_o5s1om.png",
+                "imgAlt": "Home page of Automatit Inc.",
+                "desc": "Sitio web totalmente personalizado como desarrollador principal de la empresa. Construido con CodeIgniter (PHP) y un CMS personalizado. El proyecto incluye ~28 páginas de contenido personalizado y lógica, junto con un panel de administración para marketing y ventas.",
+                "tags": [
+                    "php",
+                    "codeigniter",
+                    "mysql",
+                    "html",
+                    "css",
+                    "js"
+                ]
+            },
+            {
+                "title": "Portafolio de 2022",
+                "url": "https://2022-portfolio-bcantrell1.vercel.app/",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/t_Banner 16:9/v1741924952/Screenshot_2025-03-13_210216_lkkdox.png",
+                "imgAlt": "Home page of my old 2022 Portfolio",
+                "desc": "Este fue mi sitio web de portafolio de unos años atrás. Fue construido con React y Styled Components. Era mi primer uso de React y todavía estaba aprendiendo las bases.",
+                "tags": [
+                    "react",
+                    "html",
+                    "css"
+                ]
+            },
+            {
+                "title": "Proyectos de Código Creativo",
+                "url": "https://codepen.io/bcantrell1",
+                "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741925641/Screenshot_2025-03-13_211333_lhm1pd.png",
+                "imgAlt": "Home page of Creative Coding",
+                "desc": "Este es un recopilación de proyectos de código creativo que he realizado a lo largo de los años. He estado programando durante varios años y he aprendido mucho. También he aprendido mucho sobre código creativo y cómo usar la API de canvas entre otras herramientas.",
+                "tags": [
+                    "p5.js",
+                    "canvas",
+                    "html",
+                    "css"
+                ]
+            }
+        ]
+    }
+}

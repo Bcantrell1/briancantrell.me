@@ -1,0 +1,77 @@
+@use '../../../scss/' as *;
+
+.aboutMe {
+	@include mainMiddleSettings;
+
+	@media (max-width: 768px) {
+		@include phone-borders;
+		overflow-y: scroll !important;
+	}
+
+	aside {
+
+		@media (max-width: 945px) {
+			width: 169px;
+			overflow: hidden;
+		}
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+
+		.personalContact {
+			position: relative;
+			margin-left: 15px;
+
+			&.hidden {
+				opacity: 0;
+				visibility: hidden;
+				transition:
+					opacity 0.5s ease,
+					visibility 0.5s ease;
+			}
+
+			p {
+				margin: 10px;
+				cursor: pointer;
+				width: fit-content;
+
+				&:hover {
+					color: $secondary4;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.personalSocials {
+			margin-left: 15px;
+
+			&.hidden {
+				opacity: 0;
+				visibility: hidden;
+				transition:
+					opacity 0.5s ease,
+					visibility 0.5s ease;
+			}
+
+			ul>li {
+				width: fit-content;
+				cursor: pointer;
+				margin: 10px 0;
+				padding: 0 10px;
+
+				&:hover {
+					color: $secondary4;
+				}
+
+				a {
+					color: $secondary1;
+
+					&:hover {
+						color: $secondary4;
+					}
+				}
+			}
+		}
+	}
+}
