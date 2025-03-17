@@ -13,7 +13,7 @@ const SidebarToggle: React.FC<SidebarToggleProps> = ({ onToggleSidebar }) => {
   };
 
   return (
-    <FoldableTab onToggle={handleToggle}>
+    <FoldableTab hasLine={true} onToggle={handleToggle}>
       <p>projects</p>
     </FoldableTab>
   );

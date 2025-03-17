@@ -1,0 +1,44 @@
+@use '../../../scss/' as *;
+
+.tab {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 60px;
+    border-right: 1px solid $lines;
+
+    @media screen and (max-width: 945px) {
+        position: fixed;
+        bottom: 100px;
+        left: 40px;
+        width: 100%;
+        height: 60px;
+        border-bottom: none;
+        border-right: none;
+        flex-direction: row;
+        z-index: 100;
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: none;
+        z-index: 100;
+        position: relative;
+    }
+    
+    .tabIcon {
+        margin: 10px;
+        cursor: pointer;
+        width: 24px;
+        
+        &:hover,
+        &.active {
+            filter: brightness(4);
+            opacity: 0.9;
+        }
+    }
+}

@@ -6,9 +6,10 @@ interface FoldableTabProps {
   initiallyFolded?: boolean;
   onToggle?: () => void;
   children: React.ReactNode;
+  hasLine?: boolean;
 }
 
-const FoldableTab: React.FC<FoldableTabProps> = ({ initiallyFolded = false, onToggle, children }) => {
+const FoldableTab: React.FC<FoldableTabProps> = ({ initiallyFolded = false, onToggle, hasLine = false, children }) => {
   const [isToggled, setIsToggled] = useState(initiallyFolded);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const FoldableTab: React.FC<FoldableTabProps> = ({ initiallyFolded = false, onTo
 
   return (
     <>
-      <span className={styles.line} />
+      <span style={{ display: hasLine ? 'block' : 'none' }} className={styles.line} />
       <div className={styles.navTitled}>
         <div
           className={`${styles.foldableTab} ${isToggled ? styles.isFolded : ''}`}
