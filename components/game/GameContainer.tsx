@@ -6,15 +6,19 @@ import styles from './gameContainer.module.scss'
 import { Link } from '@/i18n/navigation'
 import { ArrowLeftSquareIcon, ArrowRightSquareIcon } from 'lucide-react'
 
+interface controllerRef {
+  moveLeft: () => void;
+  moveRight: () => void;
+}
 
 export default function GameContainer() {
-  const racingGameRef = useRef<any>(null)
+  const controllerRef = useRef<controllerRef>(null)
 
   const triggerMove = (direction: 'left' | 'right') => {
     if (direction === 'left') {
-      racingGameRef.current?.moveLeft()
+      controllerRef.current?.moveLeft()
     } else {
-      racingGameRef.current?.moveRight()
+      controllerRef.current?.moveRight()
     }
   }
 
@@ -25,7 +29,7 @@ export default function GameContainer() {
           <span key={i}>x</span>
         ))}
       </div>
-      <RacingGame ref={racingGameRef} />
+      <RacingGame ref={controllerRef} />
       <div className={styles.gameController}>
         <span className={styles.instructions}>Move the car from left to right to dodge the trees!</span>
         <div className={styles.boardArrows}>

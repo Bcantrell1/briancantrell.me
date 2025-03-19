@@ -148,4 +148,6 @@ const RacingGame = forwardRef((props, ref) => {
   )
 })
 
+RacingGame.displayName = 'RacingGame'
+
 export default RacingGame
