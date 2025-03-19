@@ -231,7 +231,7 @@
 
 				&>a::after {
 					content: '”';
-					position: fixed;
+					position: absolute;
 				}
 
 				& span:first-of-type {
