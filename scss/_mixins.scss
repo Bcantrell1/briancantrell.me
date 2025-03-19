@@ -33,8 +33,8 @@
 
   &.ghost {
     background-color: $btn3_bg;
-    color: $btn3_clr;
-    border: 1px solid $btn3_clr;
+    color: $secondary4;
+    border: 1px solid $lines;
 
     &:hover {
       opacity: 0.5;

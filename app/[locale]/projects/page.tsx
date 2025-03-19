@@ -46,11 +46,6 @@ const Projects = () => {
 		);
 	};
 
-	// const saveActiveItems = useCallback(() => {
-	// 	const activeTitles = list.filter((item) => item.isActive).map((item) => item.title);
-	// 	localStorage.setItem('activeItems', JSON.stringify(activeTitles));
-	// }, [list]);
-
 	const loadActiveItems = () => {
 		try {
 			const storedActiveItems = JSON.parse(localStorage.getItem('activeItems') || '[]');
