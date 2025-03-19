@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import styles from './page.module.scss';
+import GameContainer from '@/components/game/GameContainer';
 
 export default function HomePage() {
   const t = useTranslations('HomePage');
@@ -29,7 +30,7 @@ export default function HomePage() {
           </div>
         </section>
         <aside>
-          {/* <GameContainer /> */}
+          <GameContainer />
         </aside>
       </div>
     </div>

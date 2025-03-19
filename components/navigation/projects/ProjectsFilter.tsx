@@ -44,7 +44,12 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
                     {
                         project.img && (
                           <div className={styles.imageContainer}>
-                            <Image src={project.img} alt={project.title} fill />
+                            <Image 
+                              src={project.img} 
+                              alt={project.title} 
+                              fill 
+                              style={{ objectFit: 'cover', objectPosition: 'top' }}
+                            />
                           </div>
                         )
                     }
