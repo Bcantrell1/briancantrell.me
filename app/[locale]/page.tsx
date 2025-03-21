@@ -22,6 +22,7 @@ export default function HomePage() {
             <p>{ t('pageMobile') }</p>
             <span>const</span> <span>githubLink</span> {` = `}
             <Link
+              target="_blank"
               aria-label="go to my github page"
               href="https://github.com/bcantrell1"
             >

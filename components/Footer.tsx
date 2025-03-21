@@ -21,7 +21,7 @@ const Footer = ({ style }: { style?: React.CSSProperties }) => {
 	return (
 		<footer className={styles.footer} style={style}>
 			<div className={styles.container}>
-				<p>Hit me up:</p>
+				<p>Check out:</p>
 				<div className={styles.social}>
 					<Link target='_blank' aria-label="go to my linkedin page" href={linkedinLink}>
 						<div className={styles.item}>
