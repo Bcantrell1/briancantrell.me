@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useImperativeHandle, forwardRef, useCallback } from 'react'
+import confetti from 'canvas-confetti'
 import styles from './racingGame.module.scss'
 
 type Position = { x: number; y: number }
@@ -51,6 +52,32 @@ const RacingGame = forwardRef((props, ref) => {
     setLastMoveTime(0)
   }, [])
 
+  const triggerConfetti = useCallback(() => {
+    const runConfetti = () => {
+      confetti({
+        particleCount: 80,
+        angle: 60,
+        spread: 95,
+        origin: { x: 0 },
+        gravity: 1,
+        scalar: 1.2,
+        drift: 1,
+        colors: ['#AB0520', '#ffffff']
+      });
+      confetti({
+        particleCount: 80,
+        angle: 120,
+        spread: 95,
+        origin: { x: 1 },
+        gravity: 1,
+        scalar: 1.2,
+        drift: -1,
+        colors: ['#AB0520', '#ffffff']
+      });
+    };
+    runConfetti();
+  }, []);
+
   useImperativeHandle(ref, () => ({
     moveLeft,
     moveRight,
@@ -72,6 +99,7 @@ const RacingGame = forwardRef((props, ref) => {
           if (newY < 1) {
             setWin(true)
             setGameOver(true)
+            triggerConfetti();
             return prev
           }
           if (trees.some(tree => tree.x === prev.x && tree.y === newY)) {
@@ -91,7 +119,7 @@ const RacingGame = forwardRef((props, ref) => {
     return () => {
       cancelAnimationFrame(animationFrameId)
     }
-  }, [gameStarted, gameOver, trees, lastMoveTime])
+  }, [gameStarted, gameOver, trees, lastMoveTime, triggerConfetti])
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
