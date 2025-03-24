@@ -8,28 +8,28 @@ import '../../scss/main.scss';
 import '../../scss/index.scss';
 
 export default async function LocaleLayout({
-	children,
-	params
+    children,
+    params,
 }: {
-	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
+    children: React.ReactNode;
+    params: Promise<{ locale: string }>;
 }) {
-	const { locale } = await params;
-	if (!hasLocale(routing.locales, locale)) {
-		notFound();
-	}
+    const { locale } = await params;
+    if (!hasLocale(routing.locales, locale)) {
+        notFound();
+    }
 
-	return (
-		<html lang={locale}>
-			<body>
-				<div id="__next">
-					<NextIntlClientProvider>
-						<Navbar name="Brian Cantrell" />
-						{children}
-						<Footer />
-					</NextIntlClientProvider>
-				</div>
-			</body>
-		</html>
-	);
+    return (
+        <html lang={locale}>
+            <body>
+                <div id="__next">
+                    <NextIntlClientProvider>
+                        <Navbar name="Brian Cantrell" />
+                        {children}
+                        <Footer />
+                    </NextIntlClientProvider>
+                </div>
+            </body>
+        </html>
+    );
 }

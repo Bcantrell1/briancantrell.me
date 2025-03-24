@@ -5,10 +5,11 @@
         "greeting": "Howdy there, I'm",
         "name": "Brian Cantrell",
         "role": "> Software Engineer",
-        "task": "// play my game if you want",
-        "github": "// you can also find it on my Github page",
+        "github": "// Check out my Github profile",
+        "gitlab": "// or check out my Gitlab history",
         "profile": "github.com/bcantrell1",
-        "pageMobile": "// Find my profile on github",
+        "profile1": "gitlab.com/bcantrell",
+        "pageMobile": "// Find my profile on Github or Gitlab",
         "gameTips_0": "// use keyboard",
         "gameTips_1": "// arrows to play",
         "foodLeft": "// food left",
@@ -112,7 +113,7 @@
                     "title": "2023",
                     "subTitle": "Married my beautiful wife",
                     "description": "My wife and I got married in October of 2023. We have been traveling the world and enjoying our time together. Making the most of our time together before the next chapter of our lives begins."
-                }, 
+                },
                 "2024": {
                     "title": "2024",
                     "subTitle": "Growth as a Software Engineer",
@@ -147,12 +148,7 @@
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
                 "imgAlt": "Home page of Cosmic Hall",
                 "desc": "Virtual classroom intended to teach the basics of the cosmos. Topics related to common misunderstandings and the basics surrounding the industry. ",
-                "tags": [
-                    "html",
-                    "css",
-                    "react",
-                    "ts"
-                ]
+                "tags": ["html", "css", "react", "ts"]
             },
             {
                 "title": "SGM Scapes",
@@ -160,11 +156,7 @@
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
                 "imgAlt": "Home page of SGM Scapes",
                 "desc": "A website for a local landscaping | hardscaping company. It features your standard pages as well a custom wizard for estimating projects. Other goodies include a news area and a carousel.",
-                "tags": [
-                    "html",
-                    "css",
-                    "react"
-                ]
+                "tags": ["html", "css", "react"]
             },
             {
                 "title": "Dota 2 Analytics",
@@ -172,12 +164,7 @@
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741911853/dongpng_rr0vra.png",
                 "imgAlt": "Home page of Dota 2 Analytics",
                 "desc": "A dashboard for viewing Dota 2 statistics and analytics for the turbo game mode. This was built originally for a friend's guild but became a job for a discord group so I kept it up to date.",
-                "tags": [
-                    "html",
-                    "css",
-                    "react",
-                    "ts"
-                ]
+                "tags": ["html", "css", "react", "ts"]
             },
             {
                 "title": "Automatit Inc.",
@@ -185,14 +172,7 @@
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741912187/Screenshot_2025-03-13_172930_o5s1om.png",
                 "imgAlt": "Home page of Automatit Inc.",
                 "desc": "Fully custom site as the lead developer for my previous employers main site. Built with codeigniter(PHP) and a custom CMS. The project features ~28 pages of custom content and logic alongside and admin panel for marketing and sales.",
-                "tags": [
-                    "php",
-                    "codeigniter",
-                    "mysql",
-                    "html",
-                    "css",
-                    "js"
-                ]
+                "tags": ["php", "codeigniter", "mysql", "html", "css", "js"]
             },
             {
                 "title": "Old 2022 Portfolio",
@@ -200,11 +180,7 @@
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/t_Banner 16:9/v1741924952/Screenshot_2025-03-13_210216_lkkdox.png",
                 "imgAlt": "Home page of my old 2022 Portfolio",
                 "desc": "This was my portfolio site from a few years ago. It was built with React and Styled Components. This was my first time using React and I was still learning the ropes.",
-                "tags": [
-                    "react",
-                    "html",
-                    "css"
-                ]
+                "tags": ["react", "html", "css"]
             },
             {
                 "title": "Creative Coding Projects",
@@ -212,12 +188,7 @@
                 "img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741925641/Screenshot_2025-03-13_211333_lhm1pd.png",
                 "imgAlt": "Home page of Creative Coding",
                 "desc": "This is a collection of creative coding projects I've done over the years. I've been coding for a few years now and I've learned a lot. I've also learned a lot about creative coding and how to use the canvas API among other tool sets.",
-                "tags": [
-                    "p5.js",
-                    "canvas",
-                    "html",
-                    "css"
-                ]
+                "tags": ["p5.js", "canvas", "html", "css"]
             }
         ]
     }

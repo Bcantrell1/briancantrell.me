@@ -19,7 +19,7 @@
         line-height: 1.6;
         width: 100%;
 
-        >p:first-of-type {
+        > p:first-of-type {
             margin-left: 20px;
             margin-right: 20px;
             color: $secondary1;
@@ -31,7 +31,7 @@
             // margin-left: 20px;
             align-items: center;
 
-            &>* {
+            & > * {
                 width: 60px;
                 height: 60px;
                 position: relative;
@@ -68,7 +68,7 @@
                 user-select: none;
             }
 
-            &>a {
+            & > a {
                 padding-top: 20px;
                 padding-left: 10px;
             }

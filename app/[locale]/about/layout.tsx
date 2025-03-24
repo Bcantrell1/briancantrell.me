@@ -1,9 +1,9 @@
 import AboutLayout from './about-layout';
 
 export default function RootLayout({
-	children,
+    children,
 }: {
-	children: React.ReactNode;
+    children: React.ReactNode;
 }) {
-	return <AboutLayout>{children}</AboutLayout>;
+    return <AboutLayout>{children}</AboutLayout>;
 }

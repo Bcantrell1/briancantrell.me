@@ -1,44 +1,44 @@
 @use '../../scss/' as *;
 
 .selectTab {
-	display: inline-block;
-	left: 300px;
-	top: 0;
-	position: absolute;
-	user-select: none;
+    display: inline-block;
+    left: 300px;
+    top: 0;
+    position: absolute;
+    user-select: none;
 
-	ul {
-		display: flex;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		overflow-y: hidden;
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow-y: hidden;
 
-		li {
-			display: flex;
-			align-items: center;
-			padding: 10px 15px;
-			position: relative;
-			border: solid 1px $lines;
-			border-top-style: none;
+        li {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            position: relative;
+            border: solid 1px $lines;
+            border-top-style: none;
 
-			.remove {
-				font-family: cursive, serif;
-				text-align: center;
-				line-height: 1.35;
-				width: 20px;
-				height: 20px;
-				margin-left: 20px;
-				cursor: pointer;
-			}
-		}
-	}
+            .remove {
+                font-family: cursive, serif;
+                text-align: center;
+                line-height: 1.35;
+                width: 20px;
+                height: 20px;
+                margin-left: 20px;
+                cursor: pointer;
+            }
+        }
+    }
 
-	@media (max-width: 945px) {
-		left: 169px;
-	}
+    @media (max-width: 945px) {
+        left: 169px;
+    }
 
-	@media (max-width: 768px) {
-		display: none;
-	}
+    @media (max-width: 768px) {
+        display: none;
+    }
 }

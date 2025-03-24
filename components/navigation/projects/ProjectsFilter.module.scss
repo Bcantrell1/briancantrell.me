@@ -1,132 +1,132 @@
 @use '../../../scss/' as *;
 
 .emptyMessage {
-	color: $accent1;
-	border-radius: 25px;
-	background: #181818;
+    color: $accent1;
+    border-radius: 25px;
+    background: #181818;
 
-	@media screen and (max-width: 768px) {
-		box-shadow: 0 0 20px 7px #ffffff12;
-		width: calc(100% - 20px);
-		margin: auto;
-		text-align: center;
-		line-height: 1.5;
-		font-size: 26px;
-		padding: 10px;
-	}
+    @media screen and (max-width: 768px) {
+        box-shadow: 0 0 20px 7px #ffffff12;
+        width: calc(100% - 20px);
+        margin: auto;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 26px;
+        padding: 10px;
+    }
 
-	p {
-		@media screen and (min-width: 769px) {
-			position: absolute;
-			width: calc(100% - 300px);
-			max-width: 1000px;
-			font-size: 36px;
-			margin: 0 50px;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
-	}
+    p {
+        @media screen and (min-width: 769px) {
+            position: absolute;
+            width: calc(100% - 300px);
+            max-width: 1000px;
+            font-size: 36px;
+            margin: 0 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .filteredProjects {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	left: 350px;
-	position: absolute;
-	top: 100px;
-	overflow: hidden;
-	padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    left: 350px;
+    position: absolute;
+    top: 100px;
+    overflow: hidden;
+    padding-bottom: 100px;
 
-	@media (max-width: 945px) {
-		left: 215px;
-		width: calc(100vw - 328px);
-	}
+    @media (max-width: 945px) {
+        left: 215px;
+        width: calc(100vw - 328px);
+    }
 
-	@media (max-width: 768px) {
-		width: calc(100vw  - 50px);
-		flex-direction: column;
-		left: 0;
-		top: 0;
-		position: relative;
-	}
+    @media (max-width: 768px) {
+        width: calc(100vw - 50px);
+        flex-direction: column;
+        left: 0;
+        top: 0;
+        position: relative;
+    }
 
-	@media (min-width: 769px) and (max-width: 1024px) {
-		display: flex;
-		align-content: center;
-		justify-content: space-evenly;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: stretch;
-	}
+    @media (min-width: 769px) and (max-width: 1024px) {
+        display: flex;
+        align-content: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
 
-	@media (min-width: 1024px) and (max-width: 1200px) {
-		width: calc(100vw - 430px);
-	}
+    @media (min-width: 1024px) and (max-width: 1200px) {
+        width: calc(100vw - 430px);
+    }
 
-	@media (min-width: 1200px) {
-		.projectCard {
-			flex-basis: calc(50% - 10px);
-		}
-	}
+    @media (min-width: 1200px) {
+        .projectCard {
+            flex-basis: calc(50% - 10px);
+        }
+    }
 
-	@media (min-width: 1620px) {
-		.projectCard {
-			flex-basis: calc(33% - 10px);
-		}
-	}
+    @media (min-width: 1620px) {
+        .projectCard {
+            flex-basis: calc(33% - 10px);
+        }
+    }
 
-	.projectCard {
-		padding: 20px;
-		border-radius: 8px;
-		width: 100%;
+    .projectCard {
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
 
-		.cardTitle {
-			font-size: $body_text_size;
-		}
+        .cardTitle {
+            font-size: $body_text_size;
+        }
 
-		.cardContent {
-			background-color: $code_snippets_bg;
-			border-radius: 15px;
-			border: 1px solid $lines;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
+        .cardContent {
+            background-color: $code_snippets_bg;
+            border-radius: 15px;
+            border: 1px solid $lines;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
 
-			p {
-				text-align: left;
-				padding: 20px 20px 0 20px;
-				flex-grow: 1;
-			}
+            p {
+                text-align: left;
+                padding: 20px 20px 0 20px;
+                flex-grow: 1;
+            }
 
-			.imageContainer {
-				max-width: 100%;
-				height: auto;
-				display: block;
-				margin-bottom: 10px;
-				border-radius: 15px 15px 0 0;
-				min-width: 200px;
-				min-height: 225px;
-				position: relative;
-				overflow: hidden;
+            .imageContainer {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin-bottom: 10px;
+                border-radius: 15px 15px 0 0;
+                min-width: 200px;
+                min-height: 225px;
+                position: relative;
+                overflow: hidden;
 
-				img {
-					border-radius: 15px 15px 0 0;
-					object-fit: cover;
-					object-position: top;
-					width: 100%;
-					height: 100%;
-				}
-			}
+                img {
+                    border-radius: 15px 15px 0 0;
+                    object-fit: cover;
+                    object-position: top;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
 
-			.projectLink {
-				bottom: 0;
-				left: 20px;
-				position: relative;
-				margin: 20px 0;
-				margin-top: auto;
-			}
-		}
-	}
+            .projectLink {
+                bottom: 0;
+                left: 20px;
+                position: relative;
+                margin: 20px 0;
+                margin-top: auto;
+            }
+        }
+    }
 }

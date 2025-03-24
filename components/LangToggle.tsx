@@ -24,9 +24,13 @@ export default function LangToggle() {
     ];
 
     const getFlag = (countryCode: string) => {
-        if (!countryCode) return ''
-        return String.fromCodePoint(...[...countryCode.toUpperCase()].map(c => 0x1F1E6 + c.charCodeAt(0) - 65))
-    }
+        if (!countryCode) return '';
+        return String.fromCodePoint(
+            ...[...countryCode.toUpperCase()].map(
+                c => 0x1f1e6 + c.charCodeAt(0) - 65,
+            ),
+        );
+    };
 
     return (
         <div className={styles.language_switcher}>
@@ -37,14 +41,14 @@ export default function LangToggle() {
                 value={locale}
                 aria-label={`Switch to ${locale === 'en' ? 'Español' : 'English'}`}
             >
-                {languages.map((language) => {
+                {languages.map(language => {
                     // Find the current language to get its flag code
-                    const flag = language.flag || language.code
+                    const flag = language.flag || language.code;
                     return (
                         <option key={language.code} value={language.code}>
                             {getFlag(flag)} {language.name}
                         </option>
-                    )
+                    );
                 })}
             </select>
         </div>
