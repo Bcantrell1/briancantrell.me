@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import styles from './page.module.scss';
 import GameContainer from '@/components/game/GameContainer';
+import 'animate.css';
 
 export default function HomePage() {
     const t = useTranslations('HomePage');
@@ -9,15 +10,15 @@ export default function HomePage() {
         <div className={styles.home}>
             <div className={styles.container}>
                 <section>
-                    <div className={styles.info}>
+                    <div className={`${styles.info} animate__animated animate__fadeIn`}>
                         <span>{t('greeting')}</span>
-                        <h1>{t('name')}</h1>
-                        <p>{t('role')}</p>
+                        <h1 className="animate__animated animate__fadeInUp">{t('name')}</h1>
+                        <p className="animate__animated animate__fadeInUp animate__delay-1s">{t('role')}</p>
                     </div>
-                    <div className={styles.task}>
+                    <div className={`${styles.task} animate__animated animate__fadeIn animate__delay-1s`}>
                         <p>{t('github')}</p>
                     </div>
-                    <div className={styles.github_repo}>
+                    <div className={`${styles.github_repo} animate__animated animate__fadeInLeft animate__delay-1s`}>
                         <p>{t('pageMobile')}</p>
                         <span>const</span> <span>githubLink</span> {` = `}
                         <Link
@@ -28,10 +29,10 @@ export default function HomePage() {
                             {t('profile')}
                         </Link>
                     </div>
-                    <div className={styles.task}>
+                    <div className={`${styles.task} animate__animated animate__fadeIn animate__delay-2s`}>
                         <p>{t('gitlab')}</p>
                     </div>
-                    <div className={styles.github_repo}>
+                    <div className={`${styles.github_repo} animate__animated animate__fadeInLeft animate__delay-2s`}>
                         <span>const</span> <span>gitLabLink</span> {` = `}
                         <Link
                             target="_blank"
@@ -42,7 +43,7 @@ export default function HomePage() {
                         </Link>
                     </div>
                 </section>
-                <aside>
+                <aside className="animate__animated animate__fadeInRight">
                     <GameContainer />
                 </aside>
             </div>

@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Footer from './Footer';
 import { Link, usePathname } from '@/i18n/navigation';
 import styles from './navbar.module.scss';
+import 'animate.css';
 
 const Navbar = ({ name }: { name: string }) => {
     const [showPhoneMenu, setShowPhoneMenu] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = ({ name }: { name: string }) => {
         <header className={styles.header}>
             {/* Main Container */}
             <div className={styles.container}>
-                <div className={styles.name}>{name}</div>
+                <div className={`${styles.name} animate__animated animate__bounceInRight`}>{name}</div>
                 <nav className={styles.nav}>
                     <Link
                         href={'/'}
