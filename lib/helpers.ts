@@ -12,7 +12,7 @@ export const createTimeCodeSnippet = () => {
 };
 
 export const parseBioText = (text: string): Segment[][] => {
-    return text.split('\n').map((line) => {
+    return text.split('\n').map(line => {
         const segments: Segment[] = [];
         let match;
         const boldRegex = /\*\*(.*?)\*\*/g;
@@ -20,7 +20,10 @@ export const parseBioText = (text: string): Segment[][] => {
         let lastIndex = 0;
         while ((match = boldRegex.exec(line)) !== null) {
             if (match.index > lastIndex) {
-                segments.push({ text: line.slice(lastIndex, match.index), isBold: false });
+                segments.push({
+                    text: line.slice(lastIndex, match.index),
+                    isBold: false,
+                });
             }
             segments.push({ text: match[1], isBold: true });
             lastIndex = match.index + match[0].length;

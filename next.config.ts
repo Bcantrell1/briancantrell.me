@@ -1,6 +1,6 @@
-import {NextConfig} from 'next';
+import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
- 
+
 const nextConfig: NextConfig = {
     sassOptions: {
         includePaths: ['./scss'],
@@ -9,8 +9,8 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 hostname: 'res.cloudinary.com',
-            }
-        ]
+            },
+        ],
     },
     async redirects() {
         return [
@@ -23,10 +23,10 @@ const nextConfig: NextConfig = {
                 source: '/es/about',
                 destination: '/es/about/personal/bio',
                 permanent: true,
-            }
-        ]
-    }
+            },
+        ];
+    },
 };
- 
+
 const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);

@@ -1,181 +1,194 @@
-'use client'
+'use client';
 
-import { useState, useEffect, useImperativeHandle, forwardRef, useCallback } from 'react'
-import confetti from 'canvas-confetti'
-import styles from './racingGame.module.scss'
+import {
+    useState,
+    useEffect,
+    useImperativeHandle,
+    forwardRef,
+    useCallback,
+} from 'react';
+import confetti from 'canvas-confetti';
+import styles from './racingGame.module.scss';
 
-type Position = { x: number; y: number }
+type Position = { x: number; y: number };
 
-const GRID_WIDTH = 20
-const GRID_HEIGHT = 34
-const OBSTACLE_COUNT = 20
-const MOVE_INTERVAL = 150
+const GRID_WIDTH = 20;
+const GRID_HEIGHT = 34;
+const OBSTACLE_COUNT = 20;
+const MOVE_INTERVAL = 150;
 
 function generateTrees(): Position[] {
-  const trees: Position[] = [];
-  while (trees.length < OBSTACLE_COUNT) {
-    const x = Math.floor(Math.random() * GRID_WIDTH) + 1;
-    const y = Math.floor(Math.random() * (GRID_HEIGHT - 8)) + 1;
-    if (!trees.some(tree => tree.x === x && tree.y === y)) {
-      trees.push({ x, y });
+    const trees: Position[] = [];
+    while (trees.length < OBSTACLE_COUNT) {
+        const x = Math.floor(Math.random() * GRID_WIDTH) + 1;
+        const y = Math.floor(Math.random() * (GRID_HEIGHT - 8)) + 1;
+        if (!trees.some(tree => tree.x === x && tree.y === y)) {
+            trees.push({ x, y });
+        }
     }
-  }
-  return trees;
+    return trees;
 }
 
 const RacingGame = forwardRef((props, ref) => {
-  const [car, setCar] = useState<Position>({ x: 10, y: GRID_HEIGHT })
-  const [trees, setTrees] = useState<Position[]>([])
-  const [gameStarted, setGameStarted] = useState(false)
-  const [gameOver, setGameOver] = useState(false)
-  const [win, setWin] = useState(false)
-  const [lastMoveTime, setLastMoveTime] = useState(0)
+    const [car, setCar] = useState<Position>({ x: 10, y: GRID_HEIGHT });
+    const [trees, setTrees] = useState<Position[]>([]);
+    const [gameStarted, setGameStarted] = useState(false);
+    const [gameOver, setGameOver] = useState(false);
+    const [win, setWin] = useState(false);
+    const [lastMoveTime, setLastMoveTime] = useState(0);
 
-  const moveLeft = useCallback(() => {
-    if (gameStarted && !gameOver && car.x > 1) {
-      setCar(prev => ({ ...prev, x: prev.x - 1 }))
-    }
-  }, [gameStarted, gameOver, car.x])
+    const moveLeft = useCallback(() => {
+        if (gameStarted && !gameOver && car.x > 1) {
+            setCar(prev => ({ ...prev, x: prev.x - 1 }));
+        }
+    }, [gameStarted, gameOver, car.x]);
 
-  const moveRight = useCallback(() => {
-    if (gameStarted && !gameOver && car.x < GRID_WIDTH) {
-      setCar(prev => ({ ...prev, x: prev.x + 1 }))
-    }
-  }, [gameStarted, gameOver, car.x])
+    const moveRight = useCallback(() => {
+        if (gameStarted && !gameOver && car.x < GRID_WIDTH) {
+            setCar(prev => ({ ...prev, x: prev.x + 1 }));
+        }
+    }, [gameStarted, gameOver, car.x]);
 
-  const startGame = useCallback(() => {
-    setCar({ x: 10, y: GRID_HEIGHT })
-    setTrees(generateTrees())
-    setGameStarted(true)
-    setGameOver(false)
-    setWin(false)
-    setLastMoveTime(0)
-  }, [])
+    const startGame = useCallback(() => {
+        setCar({ x: 10, y: GRID_HEIGHT });
+        setTrees(generateTrees());
+        setGameStarted(true);
+        setGameOver(false);
+        setWin(false);
+        setLastMoveTime(0);
+    }, []);
 
-  const triggerConfetti = useCallback(() => {
-    const runConfetti = () => {
-      confetti({
-        particleCount: 80,
-        angle: 60,
-        spread: 95,
-        origin: { x: 0 },
-        gravity: 1,
-        scalar: 1.2,
-        drift: 1,
-        colors: ['#AB0520', '#ffffff']
-      });
-      confetti({
-        particleCount: 80,
-        angle: 120,
-        spread: 95,
-        origin: { x: 1 },
-        gravity: 1,
-        scalar: 1.2,
-        drift: -1,
-        colors: ['#AB0520', '#ffffff']
-      });
-    };
-    runConfetti();
-  }, []);
+    const triggerConfetti = useCallback(() => {
+        const runConfetti = () => {
+            confetti({
+                particleCount: 80,
+                angle: 60,
+                spread: 95,
+                origin: { x: 0 },
+                gravity: 1,
+                scalar: 1.2,
+                drift: 1,
+                colors: ['#AB0520', '#ffffff'],
+            });
+            confetti({
+                particleCount: 80,
+                angle: 120,
+                spread: 95,
+                origin: { x: 1 },
+                gravity: 1,
+                scalar: 1.2,
+                drift: -1,
+                colors: ['#AB0520', '#ffffff'],
+            });
+        };
+        runConfetti();
+    }, []);
 
-  useImperativeHandle(ref, () => ({
-    moveLeft,
-    moveRight,
-    startGame
-  }), [moveLeft, moveRight, startGame])
+    useImperativeHandle(
+        ref,
+        () => ({
+            moveLeft,
+            moveRight,
+            startGame,
+        }),
+        [moveLeft, moveRight, startGame],
+    );
 
-  useEffect(() => {
-    if (!gameStarted || gameOver) return
+    useEffect(() => {
+        if (!gameStarted || gameOver) return;
 
-    let animationFrameId: number
-    let lastTimestamp = 0
+        let animationFrameId: number;
+        let lastTimestamp = 0;
 
-    const gameLoop = (timestamp: number) => {
-      if (!lastTimestamp) lastTimestamp = timestamp
-      
-      if (timestamp - lastMoveTime >= MOVE_INTERVAL) {
-        setCar(prev => {
-          const newY = prev.y - 1
-          if (newY < 1) {
-            setWin(true)
-            setGameOver(true)
-            triggerConfetti();
-            return prev
-          }
-          if (trees.some(tree => tree.x === prev.x && tree.y === newY)) {
-            setGameOver(true)
-            return prev
-          }
-          setLastMoveTime(timestamp)
-          return { ...prev, y: newY }
-        })
-      }
-      
-      animationFrameId = requestAnimationFrame(gameLoop)
-    }
-    
-    animationFrameId = requestAnimationFrame(gameLoop)
-    
-    return () => {
-      cancelAnimationFrame(animationFrameId)
-    }
-  }, [gameStarted, gameOver, trees, lastMoveTime, triggerConfetti])
+        const gameLoop = (timestamp: number) => {
+            if (!lastTimestamp) lastTimestamp = timestamp;
 
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (!gameStarted || gameOver) return
-      
-      if (event.key === 'ArrowLeft') {
-        moveLeft()
-      } else if (event.key === 'ArrowRight') {
-        moveRight()
-      }
-    }
-    
-    window.addEventListener('keydown', handleKeyDown)
-    return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [gameStarted, gameOver, moveLeft, moveRight])
+            if (timestamp - lastMoveTime >= MOVE_INTERVAL) {
+                setCar(prev => {
+                    const newY = prev.y - 1;
+                    if (newY < 1) {
+                        setWin(true);
+                        setGameOver(true);
+                        triggerConfetti();
+                        return prev;
+                    }
+                    if (
+                        trees.some(tree => tree.x === prev.x && tree.y === newY)
+                    ) {
+                        setGameOver(true);
+                        return prev;
+                    }
+                    setLastMoveTime(timestamp);
+                    return { ...prev, y: newY };
+                });
+            }
 
-  const rowsToFinish = car.y - 1
+            animationFrameId = requestAnimationFrame(gameLoop);
+        };
 
-  return (
-    <div className={styles.gameScreen}>
-      <div className={styles.scores}>
-        {gameStarted && !gameOver && <p>Rows to finish: {rowsToFinish}</p>}
-      </div>
-      <div className={styles.outcomeDisplay}>
-        {!gameStarted && !gameOver && (
-          <button onClick={startGame}>Start Game</button>
-        )}
-        {gameOver && (
-          <p className={styles.outcome}>{win ? 'You Win!' : 'Game Over'}</p>
-        )}
-        {gameOver && (
-          <div
-            className={styles.congrats}
-            onClick={startGame}
-          >
-            Play Again
-          </div>
-        )}
-      </div>
-      <div className={styles.grid}>
-        {trees.map((tree, index) => (
-          <div
-            key={index}
-            className={styles.tree}
-            style={{ gridColumn: tree.x, gridRow: tree.y }}
-          />
-        ))}
-        <div
-          className={styles.car}
-          style={{ gridColumn: car.x, gridRow: car.y }}
-        />
-      </div>
-    </div>
-  )
-})
+        animationFrameId = requestAnimationFrame(gameLoop);
 
-RacingGame.displayName = 'RacingGame'
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+        };
+    }, [gameStarted, gameOver, trees, lastMoveTime, triggerConfetti]);
 
-export default RacingGame
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (!gameStarted || gameOver) return;
+
+            if (event.key === 'ArrowLeft') {
+                moveLeft();
+            } else if (event.key === 'ArrowRight') {
+                moveRight();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [gameStarted, gameOver, moveLeft, moveRight]);
+
+    const rowsToFinish = car.y - 1;
+
+    return (
+        <div className={styles.gameScreen}>
+            <div className={styles.scores}>
+                {gameStarted && !gameOver && (
+                    <p>Rows to finish: {rowsToFinish}</p>
+                )}
+            </div>
+            <div className={styles.outcomeDisplay}>
+                {!gameStarted && !gameOver && (
+                    <button onClick={startGame}>Start Game</button>
+                )}
+                {gameOver && (
+                    <p className={styles.outcome}>
+                        {win ? 'YOU WIN!' : 'YOU HIT A TREE!!'}
+                    </p>
+                )}
+                {gameOver && (
+                    <div className={styles.congrats} onClick={startGame}>
+                        Play Again
+                    </div>
+                )}
+            </div>
+            <div className={styles.grid}>
+                {trees.map((tree, index) => (
+                    <div
+                        key={index}
+                        className={styles.tree}
+                        style={{ gridColumn: tree.x, gridRow: tree.y }}
+                    />
+                ))}
+                <div
+                    className={styles.car}
+                    style={{ gridColumn: car.x, gridRow: car.y }}
+                />
+            </div>
+        </div>
+    );
+});
+
+RacingGame.displayName = 'RacingGame';
+
+export default RacingGame;

@@ -7,63 +7,68 @@ import NavItems, { NavItem } from '@/components/navigation/about/NavItems';
 import ConnectSection from '@/components/global/ConnectSection';
 
 interface AboutSideProps {
-  navigation: {
-    activeIconIndex: number;
-    isHobbiesHidden: boolean;
-    isContactHidden: boolean;
-    isMobile: boolean;
-    hobbiesDisplay: string;
-    contactDisplay: string;
-    navItems: NavItem[];
-    toggleHobbies: () => void;
-    toggleContact: () => void;
-    setActiveIcon: (index: number) => void;
-    isNavItemActive: (path: string) => boolean;
-    setActiveNavItem: (path: string) => void;
-  };
-  userData: {
-    email: string;
-    socialLinks?: Array<{
-      url: string;
-      'social-title': string;
-    }>;
-  };
+    navigation: {
+        activeIconIndex: number;
+        isHobbiesHidden: boolean;
+        isContactHidden: boolean;
+        isMobile: boolean;
+        hobbiesDisplay: string;
+        contactDisplay: string;
+        navItems: NavItem[];
+        toggleHobbies: () => void;
+        toggleContact: () => void;
+        setActiveIcon: (index: number) => void;
+        isNavItemActive: (path: string) => boolean;
+        setActiveNavItem: (path: string) => void;
+    };
+    userData: {
+        email: string;
+        socialLinks?: Array<{
+            url: string;
+            'social-title': string;
+        }>;
+    };
 }
 
 export default function AboutSide({ navigation, userData }: AboutSideProps) {
+    return (
+        <aside>
+            <IconNavigation
+                activeIconIndex={navigation.activeIconIndex}
+                setActiveIcon={navigation.setActiveIcon}
+            />
 
-  return (
-    <aside>
-      <IconNavigation 
-        activeIconIndex={navigation.activeIconIndex} 
-        setActiveIcon={navigation.setActiveIcon} 
-      />
+            <div className={styles.lists}>
+                <FoldableTab
+                    hasLine={navigation.isMobile ? false : true}
+                    onToggle={navigation.toggleHobbies}
+                >
+                    <p>about_nav</p>
+                </FoldableTab>
 
-      <div className={styles.lists}>
-        <FoldableTab hasLine={navigation.isMobile ? false : true} onToggle={navigation.toggleHobbies}>
-          <p>about_nav</p>
-        </FoldableTab>
+                <NavItems
+                    items={navigation.navItems}
+                    isHidden={navigation.isHobbiesHidden}
+                    display={navigation.hobbiesDisplay}
+                    onItemClick={navigation.setActiveNavItem}
+                    isNavItemActive={navigation.isNavItemActive}
+                />
 
-        <NavItems 
-          items={navigation.navItems}
-          isHidden={navigation.isHobbiesHidden}
-          display={navigation.hobbiesDisplay}
-          onItemClick={navigation.setActiveNavItem}
-          isNavItemActive={navigation.isNavItemActive}
-        />
+                <FoldableTab
+                    initiallyFolded={true}
+                    onToggle={navigation.toggleContact}
+                >
+                    <p>contacts</p>
+                </FoldableTab>
 
-        <FoldableTab initiallyFolded={true} onToggle={navigation.toggleContact}>
-          <p>contacts</p>
-        </FoldableTab>
-
-        <ConnectSection 
-          email={userData.email}
-          socialLinks={userData.socialLinks}
-          isHidden={navigation.isContactHidden}
-          display={navigation.contactDisplay}
-          isMobile={navigation.isMobile}
-        />
-      </div>
-    </aside>
-  );
+                <ConnectSection
+                    email={userData.email}
+                    socialLinks={userData.socialLinks}
+                    isHidden={navigation.isContactHidden}
+                    display={navigation.contactDisplay}
+                    isMobile={navigation.isMobile}
+                />
+            </div>
+        </aside>
+    );
 }
