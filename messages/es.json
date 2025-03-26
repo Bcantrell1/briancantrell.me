@@ -30,13 +30,14 @@
             "title": "Personal",
             "bio": {
                 "title": "Bio",
-                "description": "Desde 2018 he estado aprendiendo los fundamentos de la ciencia de la computación y paradigmas de programación. Los últimos {diffInYears} años y {diffInMonths} meses trabajando profesionalmente en la industria de la tecnología y buscando mi siguiente desafío.",
-                "subTitle": "He adquirido una sólida experiencia en:",
+                "description": "Comencé mi viaje como programador con motivación derivada de mi experiencia anterior en la industria de la tubería. Aprendí rápidamente que necesitaba aprender los fundamentos de la ciencia de la computación para ser valioso y participar en proyectos innovadores que me interesan.",
+                "subTitle": "Dediqué los siguientes 4 años a ello, asistiendo a la Universidad del Estado de Arizona desde 2018 hasta 2022. Medianamente a través de mis estudios, empecé a aplicar mis habilidades profesionalmente. He estado trabajando en la industria de la tecnología durante {diffInYears} años y {diffInMonths} meses desde entonces, pero ¿quién cuenta?",
+                "subTitle2": "Mi expertise técnica incluye:",
                 "subDescription": {
-                    "0": "🎨 **Desarrollo front-end**: Experiencia en HTML5, CSS/Scss y JS/TS, los cuales he utilizado para crear sitios web dinámicos y responsivos. También he trabajado profesionalmente con React, Next.js y Tailwind CSS.",
-                    "1": "🧙‍♂️ **Desarrollo de back-end**: He trabajado con varias pilas de backend diferentes, incluidas Node.js, PHP y un poco de integración con Python y Go, principalmente con servicios y API de terceros, además de crear servicios automatizados.",
-                    "2": "🗄️ **Gestión de bases de datos**: He trabajado principalmente con MySQL aunque he utilizado algunas bases de datos basadas en documentos como MongoDB en proyectos personales. Escribir consultas sin procesar y utilizar ORM como Prisma y Drizzle recientemente.",
-                    "3": "🛠️ **DevOps**: He trabajado con Docker y Kubernetes para contener aplicaciones e implementarlas en varios entornos, aunque todavía tengo más que aprender. También he trabajado con AWS para implementar y administrar servicios como buckets S3, Lambdas e instancias EC2."
+                    "0": "Lenguajes de Programación: TypeScript (principal), Go, PHP, Python",
+                    "1": "Frameworks: React, Next.js, Tailwind,  Node.js, Express, CodeIgniter, Laravel",
+                    "2": "Bases de Datos: MySQL, PostgreSQL, MongoDB, Turso",
+                    "3": "Servicios en la Nube: AWS, Docker,Gitlab CI/CD" 
                 }
             },
             "interests": {

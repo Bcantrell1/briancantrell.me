@@ -1,10 +1,10 @@
 'use client';
 
-import { useRef, useEffect } from 'react';
-import Image from 'next/image';
-import { useTranslations, useMessages } from 'next-intl';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-dark.css';
+import { useMessages, useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 import styles from './personal.module.scss';
 
 export default function PersonalPage() {
@@ -38,11 +38,14 @@ export default function PersonalPage() {
             <h1>{t('title')}</h1>
             <div className={styles.splitInHalf}>
                 <div ref={bioContainer} className={styles.personalBio}>
-                    <p>{t('description', { diffInYears, diffInMonths })}</p>
-                    <p>{t('subTitle')}</p>
+                    <p>{t('description')}</p>
+                    <p>{t('subTitle', { diffInYears, diffInMonths })}</p>
+                    <p className={styles.boldText}>{t('subTitle2')}</p>
+										<ul>
                     {subDescriptionKeys.map(key => (
-                        <p key={key}>{t(`subDescription.${key}`)}</p>
+                        <li key={key}>{t(`subDescription.${key}`)}</li>
                     ))}
+										</ul>
                 </div>
 
                 <div className={styles.codeSnippet}>
