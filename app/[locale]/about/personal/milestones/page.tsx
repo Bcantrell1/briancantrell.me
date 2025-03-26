@@ -1,22 +1,22 @@
 'use client';
 
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
 import { useTranslations } from 'next-intl';
-import styles from './milestones.module.scss';
+import {
+	VerticalTimeline,
+	VerticalTimelineElement,
+} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import styles from './milestones.module.scss';
 
 import {
-    School,
-    Code,
-    CheckSquare,
-    ArrowRightLeft,
-    GraduationCap,
-    Heart,
-    Briefcase,
-    Brain,
+	ArrowRightLeft,
+	Brain,
+	Briefcase,
+	CheckSquare,
+	Code,
+	GraduationCap,
+	Heart,
+	School,
 } from 'lucide-react';
 
 export default function MilestonesPage() {
