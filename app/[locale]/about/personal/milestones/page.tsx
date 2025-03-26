@@ -73,24 +73,24 @@ export default function MilestonesPage() {
 
                 <VerticalTimeline
                     className={styles.customTimeline}
-                    lineColor="#1e2d3d"
+                    lineColor="#252525"
                 >
                     {milestones.map(milestone => (
                         <VerticalTimelineElement
                             key={milestone.year}
                             className={styles.timelineElement}
                             contentStyle={{
-                                background: '#001221',
-                                border: '2px solid #1e2d3d',
-                                color: '#000',
+                                background: '#0a0a0a',
+                                border: '2px solid #252525',
+                                color: '#808080',
                                 borderRadius: '5px',
                                 boxShadow: '0 3px 5px rgba(0, 0, 0, 0.1)',
                             }}
                             contentArrowStyle={{
-                                borderRight: '7px solid #1e2d3d',
+                                borderRight: '7px solid #252525',
                             }}
                             date={t(`${milestone.year}.title`)}
-                            iconStyle={{ background: '#001221', color: '#fff' }}
+                            iconStyle={{ background: '#000000', color: '#fff' }}
                             icon={milestone.icon}
                         >
                             <h3 className={styles.timelineTitle}>

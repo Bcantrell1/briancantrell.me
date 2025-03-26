@@ -35,6 +35,7 @@
             .projectItem {
                 user-select: none;
                 font-size: 16px;
+								color: $secondary1;
 
                 &.active {
                     color: $secondary4;

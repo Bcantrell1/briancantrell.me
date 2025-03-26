@@ -7,7 +7,7 @@ const GitLabIcon = () => (
         height="24"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#607b96"
+        stroke="currentColor"
         strokeWidth="2"
         className="lucide lucide-gitlab"
     >
