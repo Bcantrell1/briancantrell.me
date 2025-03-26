@@ -1,11 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
-import FacebookIcon from './svg/FacebookIcon';
-import GithubIcon from './svg/GithubIcon';
 import socialData from '../config/data.json';
 import styles from './footer.module.scss';
-import Link from 'next/link';
-import GitLabIcon from './svg/GitlabIcon';
 import CodePenIcon from './svg/CodepenIcon';
+import FacebookIcon from './svg/FacebookIcon';
+import GithubIcon from './svg/GithubIcon';
+import GitLabIcon from './svg/GitlabIcon';
 import LinkedinIcon from './svg/LinkedinIcon';
 
 interface SocialLink {
@@ -59,6 +59,11 @@ const Footer = ({ style }: { style?: React.CSSProperties }) => {
                             <CodePenIcon />
                         </div>
                     </Link>
+										<div className={styles.greeting}>
+											<p>
+												Have a great {new Date().toLocaleDateString('en-US', { weekday: 'long' })}!
+											</p>
+										</div>
                 </div>
                 <div className={styles.github} tabIndex={0}>
                     <p>

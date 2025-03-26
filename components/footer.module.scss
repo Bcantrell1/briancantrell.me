@@ -5,7 +5,6 @@
 }
 
 .footer {
-    position: relative;
     font-family: $main-font;
     height: 60px;
     background-color: $primary2;
@@ -14,10 +13,10 @@
 
     & .container {
         display: flex;
-        background-color: inherit;
         height: 100%;
         line-height: 1.6;
         width: 100%;
+				position: relative;
 
         > p:first-of-type {
             margin-left: 20px;
@@ -43,6 +42,28 @@
                 }
             }
 
+						.greeting {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: auto;
+							padding: 0 20px;
+							background: linear-gradient(to right, $gradients1, $gradients2);
+							-webkit-background-clip: text;
+							background-clip: text;
+							-webkit-text-fill-color: transparent;
+
+							::selection {
+								background-color: #fea55f;
+								color: #01080e;
+								-webkit-text-fill-color: #01080e;
+							}
+
+							@media (max-width: 885px) {
+								display: none;
+							}
+						}
+
             .item {
                 text-align: center;
                 padding-top: 18px;
@@ -59,10 +80,6 @@
             border-left: solid 1px $lines;
             color: $secondary1;
             padding-right: 15px;
-
-            &:hover {
-                background-color: $primary1-hovered;
-            }
 
             p {
                 user-select: none;

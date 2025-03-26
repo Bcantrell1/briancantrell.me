@@ -87,7 +87,7 @@
         }
 
         .cardContent {
-            background-color: $code_snippets_bg;
+            background-color: $primary3;
             border-radius: 15px;
             border: 1px solid $lines;
             height: 100%;
@@ -98,6 +98,7 @@
                 text-align: left;
                 padding: 20px 20px 0 20px;
                 flex-grow: 1;
+								color: $secondary1;
             }
 
             .imageContainer {

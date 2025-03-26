@@ -1,38 +1,32 @@
-$primary1: #01080e;
-$primary1_hovered: #263b50;
-$primary2: #011627;
-$primary3: #011221;
+$primary1: #000000; 
+$primary1_hovered: #1a1a1a;
+$primary2: #111111; 
+$primary3: #0a0a0a; 
 
-$secondary1: #607b96;
-$secondary2: #3c9d93;
-$secondary3: #4d5bce;
-$secondary4: #fff;
+$secondary1: #808080; 
+$secondary2: #3592C4; 
+$secondary3: #5856d6; 
+$secondary4: #ffffff; 
 
-$accent1: #fea55f;
-$accent2: #43d9ad;
-$accent3: #e99287;
-$accent4: #c98bdf;
-$accent5: #ffd714;
-
-// --------------------------------------------
+$accent1: #d8af62; 
+$accent2: #4EC9B0; 
+$accent3: #CE9178; 
+$accent4: #C586C0; 
+$accent5: #DCDCAA; 
 
 $btn1_bg: $accent1;
 $btn1_clr: $primary1;
 
-$btn2_bg: #1c2b3a;
+$btn2_bg: #1f1f1f;
 $btn2_clr: $secondary4;
 
 $btn3_bg: transparent;
 $btn3_clr: $secondary4;
 
-// --------------------------------------------
-
-$lines: #1e2d3d;
-$gradients1: #4d5bce;
-$gradients2: #43d9ad;
-$code_snippets_bg: #001221;
-
-// --------------------------------------------
+$lines: #252525; 
+$gradients1: $secondary3;
+$gradients2: $accent2;
+$code_snippets_bg: #000000;
 
 $headline-size: 62px;
 $sub_headline_size: 32px;
