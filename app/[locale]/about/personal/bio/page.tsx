@@ -46,6 +46,9 @@ export default function PersonalPage() {
                         <li key={key}>{t(`subDescription.${key}`)}</li>
                     ))}
 										</ul>
+                    <p>{t('topProject')}</p>
+                    <p>{t('moreProjects')}</p>
+                    <p>{t('closing')}</p>
                 </div>
 
                 <div className={styles.codeSnippet}>
@@ -63,19 +66,22 @@ export default function PersonalPage() {
                     </div>
                     <pre>
                         <code ref={codeBlock} className="javascript">
-                            {`const golfShot = (planet: Planet, toHole: Yards): string => {
-  const gravity: number = getGravity(planet);
-  const distance: number = toHole / gravity * Math.random();
+                            {`const usefullCode = (value: T): T => {
+  console.log("Starting useless machine with:", value);
+    
+  const startTime = performance.now();
   
-  const trouble: Trouble = {
-    Earth: 'lake',
-    Moon: 'crater',
-    Mars: 'canyon'
-  };
-
-  return distance >= toHole ?
-    \`Shoot! We didnt clear the \${trouble[planet]}!\` 
-    : \`Welp! My ball could be lost to \${planet}'s \${trouble[planet]}!\`;
+  for (let i = 0; i < 1000000; i++) {
+    if (i % 100000 === 0) {
+      console.log(\`\${i/10000}% complete...\`);
+    }
+  }
+  
+  const endTime = performance.now();
+  console.log(\`Usefull function took \${(endTime - startTime).toFixed(2)}ms to accomplish nothing\`);
+  console.log("Returning exactly what you gave me. 😀");
+    
+  return value;
 };`}
                         </code>
                     </pre>

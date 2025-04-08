@@ -25,20 +25,23 @@
 	},
 	"AboutPage": {
 		"title": "About",
-		"description": "I am a full stack software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home.",
+		"description": "Software engineer specializing in modern web technologies. I was previously a software engineer at a startup seeking a place to call home.",
 		"personal": {
 			"title": "Personal",
 			"bio": {
 				"title": "Bio",
-				"description": "I started my programming journey with motivation drawn from previous experience in the pipeline industry. I quickly found that I needed to learn the fundamentals of computer science to be valuable and involved in the innovative projects which spark my interest. ",
-				"subTitle": "I devoted the next 4 years to doing so, attending Grand Canyon University from 2018 to 2022. Part way through my studies I started applying my skills professionally. I have been working in the industry for {diffInYears} years and {diffInMonths} months since, but who's counting?",
+				"description": "Welcome! I'm Brian Cantrell, a software engineer from Arizona with over 5 years in the industry. I have dedicated my career to solving problem with robust, performant software solutions.",
+				"subTitle": "I spent 4 years attending Grand Canyon University from 2018 to 2022 learning the fundamentals of computer science. During my studies I started applying my skills professionally working at Assa Abloy. I have been working in the industry for {diffInYears} years and {diffInMonths} months since, but who's counting?",
 				"subTitle2": "My technical expertise includes:",
 				"subDescription": {
-					"0": "Programming Languages: TypeScript (primary), Go, PHP, Python",
-					"1": "Frameworks: React, Next.js, Tailwind,  Node.js, Express, CodeIgniter, Laravel",
+					"0": "Programming Languages: TypeScript(node.js), Python, Go, PHP",
+					"1": "Frameworks: React, Next.js, Tailwind, Express, CodeIgniter, Laravel",
 					"2": "Databases: MySQL, PostgreSQL, MongoDB, Turso",
-					"3": "Cloud Services: AWS, Docker, Gitlab CI/CD" 
-				}
+					"3": "Tools and Platforms: Neovim, AWS, Github, Docker, Jest, Redis" 
+				},
+        "topProject": "One of my key projects involved integrating a comprehesive onboarding system, which streamlined the onboarding of clients for a self-storage marketing company. This project included developing a secure and scalable platform to orchestrate multiple google APIs.",
+        "moreProjects": "Additionally, I developed and maintained hundreds of client facing applications serving thousands of users daily. This includes both front and backend platforms built with various technologies. I also spearheaded the migration of legacy systems to cloud-based solutions while transitioning to modern CI/CD pipelines.",
+        "closing": "I am fully committed to advancing with the tech industry and look forward to opportunities to innovate and drive impactful projects. Thank you for taking the time to get to know me!"
 			},
 			"interests": {
 				"title": "My Interests",
