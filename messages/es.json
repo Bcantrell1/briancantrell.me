@@ -38,7 +38,10 @@
                     "1": "Frameworks: React, Next.js, Tailwind,  Node.js, Express, CodeIgniter, Laravel",
                     "2": "Bases de Datos: MySQL, PostgreSQL, MongoDB, Turso",
                     "3": "Servicios en la Nube: AWS, Docker, Gitlab CI/CD" 
-                }
+                },
+                "topProject": "Uno de mis proyectos clave consistió en la integración de un sistema integral de incorporación, que agilizó la incorporación de clientes para una empresa de marketing de autoalmacenamiento. Este proyecto incluyó el desarrollo de una plataforma segura y escalable para gestionar múltiples API de Google.",
+                "moreProjects": "Además, desarrollé y mantuve cientos de aplicaciones orientadas al cliente que atienden a miles de usuarios a diario. Esto incluye plataformas front-end y back-end desarrolladas con diversas tecnologías. También lideré la migración de sistemas heredados a soluciones en la nube, durante la transición a pipelines modernos de CI/CD.",
+                "closing": "Estoy totalmente comprometido con el progreso en la industria tecnológica y espero con interés las oportunidades para innovar e impulsar proyectos de gran impacto. ¡Gracias por tomarte el tiempo de conocerme!"
             },
             "interests": {
                 "title": "Mis Intereses y Pasiones",
