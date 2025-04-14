@@ -56,22 +56,22 @@
 				},
 				"golf": {
 					"title": "🏌️‍♂️ Golf",
-					"description": "I enjoy getting to play golf when I can. I started playing with my father and grandfather when I was young and its something I've always enjoyed. I took things a bit more seriously when I moved to Tucson and started playing with my high school team. Since then I've kept things casual and enjoy watching my friends grow in the game.",
+					"description": "I enjoy playing golf when I get the chance to. I started playing with my father and grandfather when I was young and its something I've always enjoyed. I took things a bit more seriously when I moved to Tucson and started playing with my high school team. Since then I've kept things casual and enjoy watching and helping my friends grow in the game.",
 					"image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742158749/golf_oju6ke.png"
 				},
 				"lakeLife": {
 					"title": "🚤 Lake Life",
-					"description": "As I was born and raised in Lake Havasu City, the lake life is something I've always enjoyed. Since moving to Tucson Elephant Butte has become my go to lake as my family owns a house there. Day to day life makes it a challenge, but I put in the work to get there as much as possible.",
+					"description": "I grew up in Lake Havasu City, so the lake life is something I've always enjoyed. After relocating to Tucson, AZ, Elephant Butte in New Mexico became my primary lake of choice. Day to day life makes it a challenge, but I put in my best effort day in and out to visit as often as possible.",
 					"image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159197/lake_ktooas.jpg"
 				},
 				"motorsports": {
 					"title": "🛵 Motorsports",
-					"description": "From a young age I was always intregued by anything with wheels. Whether that be with a motor or without. Passion driven from my family from all sides. I grew up riding my bike around Lake Havasu City and later on my family got me into dirt bikes. I've been crawling the deserts of Arizona since either on a mtb or a dirt bike. Anything for that matter.",
+					"description": "From a young age I was always intregued by anything with wheels. Whether that be with a motor or without. Passion driven from my family, interest, and friends. I grew up riding my bicycle around Lake Havasu City, AZ and later graduated into a dirt bike. I've been crawling the deserts of Arizona since either on a mountain bike or a dirt bike.",
 					"image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159801/motorsports_efpwdf.jpg"
 				},
 				"traveling": {
 					"title": "🌱 Traveling",
-					"description": "I've been fortunate to travel to several places in my life. I've been to a 6 different countries so far and have a few more on my list. I've traveled to several states on top of that mostly with work and some with travel. My favorite place so far would have to be Alaska.",
+					"description": "My travels involve setting foot on six different countries so far, with several more on my bucket list. While I enjoy being a world traveler, the US has so much to offer and I haven't slept on those opportunities having explored nemerous states. Travel has been both for personal and professional needs which I can't complain as I love seeing new places.",
 					"image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742160214/travel_uwhqsr.jpg"
 				},
 				"winterSports": {
@@ -81,7 +81,7 @@
 				},
 				"spaceExploration": {
 					"title": "🌌 Space Exploration",
-					"description": "I've always had a fascination with space and the universe. I often find myself researching various modern and historical space exploration topics in my free time. (My youtube algorythm would agree) My love for space is partially what inspired me to pursue a career in software engineering.",
+					"description": "I've always had a fascination with space and the universe. I often find myself researching various modern and historical space exploration topics in my free time. (My youtube algorythm would agree) My love for space is partially what inspired me to pursue a career in software engineering, as so many technological advancements led us to the progression we stand at today." ,
 					"image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742161725/space_jdmo3j.jpg"
 				}
 			},
@@ -95,8 +95,8 @@
 				},
 				"2019": {
 					"title": "2019",
-					"subTitle": "Started my first job as a Jr. Software Developer",
-					"description": "I started my first tech job as a Jr. Software Developer at a small company. The role was with the marketing team as a conversion rate optimization specialist. I was able to learn a lot about working in a real-world environment and the importance of data-driven decision making."
+					"subTitle": "Stagging my first tech opportunity!",
+					"description": "I broke into the tech industry as a Jr. Software Developer at a small startup company. The role was with the marketing team as a conversion rate optimization specialist. I was able to learn a lot about working in a real-world environment and the importance of data-driven decision making."
 				},
 				"2020": {
 					"title": "2020",
@@ -106,22 +106,22 @@
 				"2021": {
 					"title": "2021",
 					"subTitle": "Career Transition",
-					"description": "While growing as a jr software developer my current employer noticed my growing skill set and continued hunger for growth and offered me a position as a front end web developer. During this time I worked on a variety of projects including a custom CMS, backend services, and over 200 different client websites."
+					"description": "While growing as a jr software developer, my current employer noticed my growing skill set and continued hunger for growth and offered me a position as a front end web developer. During this time, I worked on a variety of projects including a custom CMS, backend services, and over 200 different client websites."
 				},
 				"2022": {
 					"title": "2022",
-					"subTitle": "Graduated from Grand Canyon University",
-					"description": "I graduated from Grand Canyon University with a Bachelor's degree in Computer Programming/Science. I was able to learn a lot about the fundamentals of computer science and programming paradigms which allowed me to grow as a software engineer."
+					"subTitle": "Finished My Studies!",
+					"description": "I graduated from Grand Canyon University with a Bachelor's degree in Computer Programming/Science. I was able to learn a lot about the fundamentals of computer science and programming paradigms which allowed me to grow and be valuable as a software engineer."
 				},
 				"2023": {
 					"title": "2023",
 					"subTitle": "Married my beautiful wife",
-					"description": "My wife and I got married in October of 2023. We have been traveling the world and enjoying our time together. Making the most of our time together before the next chapter of our lives begins."
+					"description": "My wife and I got married in October of 2023. We have been traveling the world and enjoying our time together since. Making the most of our time together before the next chapter of our lives begins."
 				},
 				"2024": {
 					"title": "2024",
 					"subTitle": "Growth as a Software Engineer",
-					"description": "Promoted in 2023 as a Software Engineer with my previous employer. I was able to learn a lot about the business and marketing side of things. I also was able to learn a lot about the software development lifecycle and working in a variety of environments."
+					"description": "I recieved a promotion in 2023 into a Software Engineer role with my previous employer. I gained invaluable knowledge of the software development lifecycle and working in a variety of environments."
 				},
 				"2025": {
 					"title": "2025",
