@@ -77,6 +77,13 @@
         }
     }
 
+    .projectSub {
+        text-align: center;
+        width: 100%;
+        padding: 0 20px;
+				font-size: 1.1rem;
+    }
+
     .projectCard {
         padding: 20px;
         border-radius: 8px;
@@ -98,34 +105,55 @@
                 text-align: left;
                 padding: 20px 20px 0 20px;
                 flex-grow: 1;
-								color: $secondary1;
+                color: $secondary1;
             }
 
             .imageContainer {
-                max-width: 100%;
-                height: auto;
-                display: block;
-                margin-bottom: 10px;
-                border-radius: 15px 15px 0 0;
-                min-width: 200px;
-                min-height: 225px;
                 position: relative;
-                overflow: hidden;
+                width: 100%;
+                height: 100%;
+								aspect-ratio: 16/9;
+                border-radius: 15px 15px 0 0;
+
+                .spinner {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 40px;
+                    height: 40px;
+                    border: 4px solid $lines;
+                    border-top: 4px solid $accent1;
+                    border-radius: 50%;
+                    animation: spin 1s linear infinite;
+                }
 
                 img {
                     border-radius: 15px 15px 0 0;
-                    object-fit: cover;
-                    object-position: top;
                     width: 100%;
                     height: 100%;
                 }
             }
 
+            @keyframes spin {
+                0% {
+                    transform: translate(-50%, -50%) rotate(0deg);
+                }
+                100% {
+                    transform: translate(-50%, -50%) rotate(360deg);
+                }
+            }
+
+            .projectLinks {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
             .projectLink {
                 bottom: 0;
-                left: 20px;
                 position: relative;
-                margin: 20px 0;
+                margin: 20px;
                 margin-top: auto;
             }
         }

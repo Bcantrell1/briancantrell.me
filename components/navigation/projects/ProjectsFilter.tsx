@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import styles from './ProjectsFilter.module.scss';
+import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
-import Image from 'next/image';
+import React, { useMemo, useState } from 'react';
+import styles from './ProjectsFilter.module.scss';
 
 interface FilteredProjectsProps {
     activeItems: string[];
@@ -11,11 +11,39 @@ interface FilteredProjectsProps {
 interface Project {
     title: string;
     url: string;
+		repo?: string;
     img: string;
     imgAlt: string;
     desc: string;
     tags: string[];
+		imgPos?: string;
 }
+interface LoadingImageProps extends Omit<ImageProps, 'style'> {
+    src: string;
+    alt: string;
+    style?: React.CSSProperties;
+}
+
+const LoadingImage: React.FC<LoadingImageProps> = ({ src, alt, ...props }) => {
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    return (
+        <div className={styles.imageContainer}>
+            {!isLoaded && <div className={styles.spinner}></div>}
+            <Image
+                src={src}
+                alt={alt}
+                fill
+                onLoad={() => setIsLoaded(true)}
+                style={{
+                    ...props.style,
+                    display: isLoaded ? 'block' : 'none',
+                }}
+                {...props}
+            />
+        </div>
+    );
+};
 
 const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
     const t = useTranslations('ProjectsPage');
@@ -36,6 +64,7 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
                 </div>
             ) : (
                 <div className={styles.filteredProjects}>
+										<p className={styles.projectSub}>Here, I showcases some of my personal projects. I`ve contributed to hundreds of varying projects and features I would love to discuss with you.</p>
                     {filteredProjects.map((project: Project) => (
                         <div key={project.title} className={styles.projectCard}>
                             <h3 className={styles.cardTitle}>
@@ -48,31 +77,45 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({ activeItems }) => {
                                     rel="noopener noreferrer"
                                 >
                                     {project.img && (
-                                        <div className={styles.imageContainer}>
-                                            <Image
-                                                src={project.img}
-                                                alt={project.title}
-                                                fill
-                                                style={{
-                                                    objectFit: 'cover',
-                                                    objectPosition: 'top',
-                                                }}
-                                            />
-                                        </div>
+                                        <LoadingImage
+                                            src={project.img}
+                                            alt={project.title}
+                                            style={{
+																								objectFit: 'cover',
+                                                objectPosition: project.imgPos ? project.imgPos : 'top',
+                                            }}
+                                        />
                                     )}
                                 </a>
                                 <p>{project.desc}</p>
-                                <Link
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    href={project.url}
-                                >
-                                    <button
-                                        className={`${styles.projectLink} ${styles.buttonStyle} ${styles.default}`}
-                                    >
-                                        view-project
-                                    </button>
-                                </Link>
+																<div className={styles.projectLinks}>
+																	<Link
+																			target="_blank"
+																			rel="noopener noreferrer"
+																			href={project.url}
+																	>
+																			<button
+																					className={`${styles.projectLink} ${styles.buttonStyle} ${styles.default}`}
+																			>
+																					view-project
+																			</button>
+																	</Link>
+																	{
+																		project.repo ? (
+																		<Link
+																				target="_blank"
+																				rel="noopener noreferrer"
+																				href={project.repo}
+																		>
+																				<button
+																						className={`${styles.projectLink} ${styles.buttonStyle} ${styles.default}`}
+																				>
+																						view-repo
+																				</button>
+																		</Link>
+																		) : null
+																	}
+																</div>
                             </div>
                         </div>
                     ))}

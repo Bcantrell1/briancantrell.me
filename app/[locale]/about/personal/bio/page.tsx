@@ -67,7 +67,7 @@ export default function PersonalPage() {
                     <pre>
                         <code ref={codeBlock} className="javascript">
                             {`const usefullCode = (value: T): T => {
-  console.log("Starting useless machine with:", value);
+  console.log("Starting super useful code with:", value);
     
   const startTime = performance.now();
   
@@ -78,8 +78,8 @@ export default function PersonalPage() {
   }
   
   const endTime = performance.now();
-  console.log(\`Usefull function took \${(endTime - startTime).toFixed(2)}ms to accomplish nothing\`);
-  console.log("Returning exactly what you gave me. 😀");
+  console.log(\`My super useful function took \${(endTime - startTime).toFixed(2)}ms\`);
+  console.log("I am as good as they say. 😉");
     
   return value;
 };`}

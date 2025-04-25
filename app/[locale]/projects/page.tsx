@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
-import styles from './project.module.scss';
-import ProjectsFilter from '@/components/navigation/projects/ProjectsFilter';
 import SelectTab from '@/components/global/SelectTab';
+import ProjectsFilter from '@/components/navigation/projects/ProjectsFilter';
 import ProjectsNav from '@/components/navigation/projects/ProjectsNav';
 import ProjectsSide from '@/components/sidebar/projects/ProjectsSide';
+import { useEffect, useMemo, useState } from 'react';
+import styles from './project.module.scss';
 
 type ProjectItem = {
     title: string;
@@ -18,11 +18,12 @@ const Projects = () => {
     const [isSidebarHidden, setIsSidebarHidden] = useState(false);
 
     const [list, setList] = useState([
+        { title: 'go', imgAlt: 'go icon', isActive: true },
+        { title: 'ts', imgAlt: 'Typescript icon', isActive: true },
+        { title: 'php', imgAlt: 'php icon', isActive: true },
         { title: 'html', imgAlt: 'html icon', isActive: true },
         { title: 'css', imgAlt: 'css icon', isActive: true },
         { title: 'react', imgAlt: 'React icon', isActive: true },
-        { title: 'ts', imgAlt: 'Typescript icon', isActive: true },
-        { title: 'php', imgAlt: 'php icon', isActive: true },
     ]);
 
     const activeItems = useMemo(
