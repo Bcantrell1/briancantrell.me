@@ -1,10 +1,11 @@
-import React from 'react';
-import styles from './ProjectsSide.module.scss';
 import CSSIcon from '@/components/svg/CSSIcon';
-import ReactIcon from '@/components/svg/ReactIcon';
-import TSIcon from '@/components/svg/TSIcon';
+import GoIcon from '@/components/svg/GoIcon';
 import HTMLIcon from '@/components/svg/HTMLIcon';
 import PHPIcon from '@/components/svg/PHPIcon';
+import ReactIcon from '@/components/svg/ReactIcon';
+import TSIcon from '@/components/svg/TSIcon';
+import React from 'react';
+import styles from './ProjectsSide.module.scss';
 interface ProjectItem {
     title: string;
     imgAlt: string;
@@ -23,6 +24,7 @@ const componentMap: {
     html: HTMLIcon,
     css: CSSIcon,
     react: ReactIcon,
+    go: GoIcon,
     ts: TSIcon,
     php: PHPIcon,
 };

@@ -147,8 +147,22 @@
 	"ProjectsPage": {
 		"projects": [
 			{
+				"title": "Pro Motocross API",
+				"url": "https://pro-motocross-api.briancantrell.me/swagger/",
+				"repo": "https://github.com/Bcantrell1/pro-motocross-api",
+				"img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1745609232/pro-motocross-api_oyhwsl.png",
+				"imgPos": "center",
+				"imgAlt": "Documentation page for the pro motocross api.",
+				"desc": "This is a custom API supporting Event and Rider information pertaining to the Pro Motocross season for 2025. Additionally a source of truth for attendees per event. Written in GO.",
+				"tags": [
+					"go",
+					"html"
+				]
+			},
+			{
 				"title": "Cosmic Hall",
 				"url": "https://www.cosmic-hall.com/",
+				"repo": "https://github.com/Bcantrell1/cosmic-hall",
 				"img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
 				"imgAlt": "Home page of Cosmic Hall",
 				"desc": "Virtual classroom intended to teach the basics of the cosmos. Topics related to common misunderstandings and the basics surrounding the industry. ",
@@ -162,6 +176,7 @@
 			{
 				"title": "SGM Scapes",
 				"url": "https://www.sgmscapes.com/",
+				"repo": "https://github.com/Bcantrell1/sgm-2024",
 				"img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
 				"imgAlt": "Home page of SGM Scapes",
 				"desc": "A website for a local landscaping | hardscaping company. It features your standard pages as well a custom wizard for estimating projects. Other goodies include a news area and a carousel.",
@@ -174,6 +189,7 @@
 			{
 				"title": "Dota 2 Analytics",
 				"url": "https://dongalyticsv2.vercel.app/",
+				"repo": "https://github.com/Bcantrell1/dongalyticsv2",
 				"img": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741911853/dongpng_rr0vra.png",
 				"imgAlt": "Home page of Dota 2 Analytics",
 				"desc": "A dashboard for viewing Dota 2 statistics and analytics for the turbo game mode. This was built originally for a friend's guild but became a job for a discord group so I kept it up to date.",
@@ -202,6 +218,7 @@
 			{
 				"title": "Old 2022 Portfolio",
 				"url": "https://2022-portfolio-bcantrell1.vercel.app/",
+				"repo": "https://github.com/Bcantrell1/2022-portfolio",
 				"img": "https://res.cloudinary.com/da5dchwkj/image/upload/t_Banner 16:9/v1741924952/Screenshot_2025-03-13_210216_lkkdox.png",
 				"imgAlt": "Home page of my old 2022 Portfolio",
 				"desc": "This was my portfolio site from a few years ago. It was built with React and Styled Components. This was my first time using React and I was still learning the ropes.",
