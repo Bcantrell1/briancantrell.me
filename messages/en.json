@@ -30,17 +30,17 @@
 			"title": "Personal",
 			"bio": {
 				"title": "Bio",
-				"description": "Welcome! I'm Brian Cantrell, a software engineer from Arizona with over 5 years in the industry. I have dedicated my career to solving problem with robust, performant software solutions.",
+				"description": "Yo! I'm Brian Cantrell, a software engineer from Arizona with over 5 years in the tech industry. I have dedicated my career to solving problem with robust, performant software solutions.",
 				"subTitle": "I spent 4 years attending Grand Canyon University from 2018 to 2022 learning the fundamentals of computer science. During my studies I started applying my skills professionally working at Assa Abloy. I have been working in the industry for {diffInYears} years and {diffInMonths} months since, but who's counting?",
 				"subTitle2": "My technical expertise includes:",
 				"subDescription": {
-					"0": "Programming Languages: TypeScript(node.js), Python, Go, PHP",
-					"1": "Frameworks: React, Next.js, Tailwind, Express, CodeIgniter, Laravel",
+					"0": "Programming Languages: Go, Javascript, PHP, Python",
+					"1": "Frameworks: React, Vue, Express, Gin, Echo, CodeIgniter, Laravel",
 					"2": "Databases: MySQL, PostgreSQL, MongoDB, Turso",
-					"3": "Tools and Platforms: Neovim, AWS, Github, Docker, Jest, Redis" 
+					"3": "Tools and Platforms: Neovim, AWS, Github, Docker, Gitkraken" 
 				},
-        "topProject": "One of my key projects involved integrating a comprehesive onboarding system, which streamlined the onboarding of clients for a self-storage marketing company. This project included developing a secure and scalable platform to orchestrate multiple google APIs.",
-        "moreProjects": "Additionally, I developed and maintained hundreds of client facing applications serving thousands of users daily. This includes both front and backend platforms built with various technologies. I also spearheaded the migration of legacy systems to cloud-based solutions while transitioning to modern CI/CD pipelines.",
+        "topProject": "One of my key projects involved designing and developing a comprehensive onboarding system, which streamlined the onboarding of clients for a marketing company. This project included developing a secure and scalable platform to orchestrate multiple REST APIs.",
+        "moreProjects": "Additionally, I developed and maintained hundreds of client facing applications serving thousands of users daily. This includes both front and backend platforms built with various technologies. I was also the lead on the migration of legacy systems to cloud-based solutions while transitioning to modern CI/CD pipelines.",
         "closing": "I am fully committed to advancing with the tech industry and look forward to opportunities to innovate and drive impactful projects. Thank you for taking the time to get to know me!"
 			},
 			"interests": {
@@ -66,7 +66,7 @@
 				},
 				"motorsports": {
 					"title": "🛵 Motorsports",
-					"description": "From a young age I was always intregued by anything with wheels. Whether that be with a motor or without. Passion driven from my family, interest, and friends. I grew up riding my bicycle around Lake Havasu City, AZ and later graduated into a dirt bike. I've been crawling the deserts of Arizona since either on a mountain bike or a dirt bike.",
+					"description": "From a young age I was always intrigued by anything with wheels. Whether that be with a motor or without. Passion driven from my family, interest, and friends. I grew up riding my bicycle around Lake Havasu City, AZ and later graduated into a dirt bike. I've been crawling the deserts of Arizona since either on a mountain bike or a dirt bike.",
 					"image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1742159801/motorsports_efpwdf.jpg"
 				},
 				"traveling": {
@@ -95,7 +95,7 @@
 				},
 				"2019": {
 					"title": "2019",
-					"subTitle": "Stagging my first tech opportunity!",
+					"subTitle": "Snagging my first tech opportunity!",
 					"description": "I broke into the tech industry as a Jr. Software Developer at a small startup company. The role was with the marketing team as a conversion rate optimization specialist. I was able to learn a lot about working in a real-world environment and the importance of data-driven decision making."
 				},
 				"2020": {
