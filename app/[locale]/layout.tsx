@@ -68,7 +68,7 @@ export default async function LocaleLayout({
         <html lang={locale}>
 						<GoogleTagManager gtmId='GTM-NWHBNTRF' />
             <body>
-							<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP7GWM2" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe></noscript>
+							<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWHBNTRF" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe></noscript>
                 <div id="__next">
                     <NextIntlClientProvider>
                         <Navbar name="Brian Cantrell" />
