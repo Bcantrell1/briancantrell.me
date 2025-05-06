@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { routing } from '@/i18n/routing';
+import { GoogleTagManager } from '@next/third-parties/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -65,7 +66,9 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale}>
+						<GoogleTagManager gtmId='GTM-NWHBNTRF' />
             <body>
+							<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MP7GWM2" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe></noscript>
                 <div id="__next">
                     <NextIntlClientProvider>
                         <Navbar name="Brian Cantrell" />
