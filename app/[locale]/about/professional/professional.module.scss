@@ -1,5 +1,46 @@
-.professionalInfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@use '@/scss/index.scss' as *;
+
+.professionalPage {
+    padding: 2rem 1rem;
+		overflow-y: unset;
+    
+    @media (min-width: 768px) {
+        padding: 3rem 2rem;
+    }
+    
+    @media (min-width: 1024px) {
+        padding: 4rem;
+    }
+}
+
+.section {
+    margin-bottom: 4rem;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sectionTitle {
+    font-size: $sub_headline_size;
+    font-weight: 600;
+    color: $secondary4;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    @media (min-width: 768px) {
+        font-size: $headline-size;
+        margin-bottom: 3rem;
+    }
+}
+
+.sectionSubtitle {
+    font-size: $body_text_size;
+    color: $secondary1;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
 }

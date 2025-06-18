@@ -7,6 +7,8 @@ export interface NavItem {
     icon: React.ReactNode;
     iconAlt: string;
     path: string;
+    target?: string;
+    href?: string;
 }
 
 interface NavItemsProps {
@@ -24,6 +26,16 @@ export default function NavItems({
     onItemClick,
     isNavItemActive,
 }: NavItemsProps) {
+    const handleItemClick = (item: NavItem) => {
+        // If it's an external link (has href), open it directly
+        if (item.href) {
+            window.open(item.href, item.target || '_self');
+        } else {
+            // Otherwise, use the internal navigation
+            onItemClick(item.path);
+        }
+    };
+
     return (
         <div
             style={{ display }}
@@ -33,7 +45,7 @@ export default function NavItems({
                 <div
                     key={index}
                     className={`${styles.hobbyItem} ${isNavItemActive(item.path) ? styles.active : ''}`}
-                    onClick={() => onItemClick(item.path)}
+                    onClick={() => handleItemClick(item)}
                 >
                     <span>{item.icon}</span>
                     <p>{item.title}</p>

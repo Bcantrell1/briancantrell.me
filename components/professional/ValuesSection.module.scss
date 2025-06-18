@@ -1,0 +1,93 @@
+@use '@/scss/index.scss' as *;
+
+.valuesSection {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: $sub_headline_size;
+    font-weight: 600;
+    color: $secondary4;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    @media (min-width: 768px) {
+        font-size: $headline-size;
+        margin-bottom: 3rem;
+    }
+}
+
+.sectionSubtitle {
+    font-size: $body_text_size;
+    color: $secondary1;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.valueCard {
+    background: $primary2;
+    border: 1px solid $lines;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, $accent2, $accent1);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover {
+        transform: translateY(-8px);
+        border-color: $accent2;
+        
+        &::before {
+            transform: scaleX(1);
+        }
+        
+        .valueIcon {
+            transform: scale(1.1) rotate(5deg);
+        }
+    }
+}
+
+.valueIcon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.valueTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $secondary4;
+    margin-bottom: 1rem;
+}
+
+.valueDescription {
+    font-size: $body_text_size;
+    color: $secondary1;
+    line-height: 1.6;
+} 
