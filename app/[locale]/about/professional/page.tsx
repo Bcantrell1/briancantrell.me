@@ -1,5 +1,10 @@
+import FeaturedProjects from '@/components/professional/FeaturedProjects';
+import HeroSection from '@/components/professional/HeroSection';
+import SkillsGrid from '@/components/professional/SkillsGrid';
+import ValuesSection from '@/components/professional/ValuesSection';
 import { getTranslations } from 'next-intl/server';
 import styles from './professional.module.scss';
+
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -20,9 +25,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function ProfessionalPage() {
-    return (
-        <div className={styles.professionalInfo}>
-            <h1>Still working on the professional page 😅</h1>
-        </div>
-    );
+	return (
+			<div className={styles.professionalPage}>
+					<HeroSection />
+					<SkillsGrid />
+					<ValuesSection />
+					<FeaturedProjects />
+			</div>
+	);
 }

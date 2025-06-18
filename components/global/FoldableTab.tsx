@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
-import styles from './FoldableTab.module.scss';
+'use client';
 import { Triangle } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import styles from './FoldableTab.module.scss';
 
 interface FoldableTabProps {
     initiallyFolded?: boolean;

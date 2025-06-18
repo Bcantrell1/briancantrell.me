@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import { useLocale } from 'next-intl';
-import styles from './layout.module.scss';
 import userData from '@/config/data.json';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import styles from './layout.module.scss';
 
-import { Terminal, Circle, Gamepad, Folder } from 'lucide-react';
 import AboutSide from '@/components/sidebar/about/AboutSide';
+import { Circle, Folder, Gamepad, Terminal } from 'lucide-react';
 
 interface IconInfo {
     icon: React.ReactNode;
@@ -61,19 +61,9 @@ export default function AboutLayout({
                     title: 'resume',
                     icon: <Folder size={20} color="#e74c3c" />,
                     iconAlt: 'red folder',
-                    path: 'resume',
-                },
-                {
-                    title: 'career',
-                    icon: <Folder size={20} color="#2ecc71" />,
-                    iconAlt: 'green folder',
-                    path: 'career',
-                },
-                {
-                    title: 'contributions',
-                    icon: <Folder size={20} color="#9b59b6" />,
-                    iconAlt: 'purple folder',
-                    path: 'contributions',
+                    path: '/resume.pdf',
+                    target: '_blank',
+                    href: '/resume.pdf',
                 },
             ];
         } else if (currentRoute.includes('hobbies')) {
@@ -210,7 +200,7 @@ export default function AboutLayout({
                     socialLinks: user.socialLinks || [],
                 }}
             />
-            <main style={{ width: '100%' }}>{children}</main>
+            <main style={{ width: '100%', overflowY: 'scroll' }}>{children}</main>
         </div>
     );
 }

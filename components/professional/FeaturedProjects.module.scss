@@ -1,0 +1,140 @@
+@import '@/scss/index.scss';
+
+.projectsSection {
+    margin-bottom: 4rem;
+}
+
+.sectionTitle {
+    font-size: $sub_headline_size;
+    font-weight: 600;
+    color: $secondary4;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    @media (min-width: 768px) {
+        font-size: $headline-size;
+        margin-bottom: 3rem;
+    }
+}
+
+.sectionSubtitle {
+    font-size: $body_text_size;
+    color: $secondary1;
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.projectCard {
+    background: $primary2;
+    border: 1px solid $lines;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    
+    &:hover {
+        transform: translateY(-8px);
+        border-color: $accent2;
+        
+        .projectOverlay {
+            opacity: 1;
+        }
+    }
+}
+
+.projectImage {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    
+    &:hover img {
+        transform: scale(1.05);
+    }
+}
+
+.projectOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($primary1, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.projectLink {
+    color: $accent2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: $body_text_size;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid $accent2;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background: $accent2;
+        color: $primary1;
+    }
+}
+
+.projectContent {
+    padding: 1.5rem;
+}
+
+.projectTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $secondary4;
+    margin-bottom: 1rem;
+}
+
+.projectDescription {
+    font-size: $body_text_size;
+    color: $secondary1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.projectTechnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.techTag {
+    background: rgba($accent2, 0.1);
+    color: $accent2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    border: 1px solid rgba($accent2, 0.3);
+} 

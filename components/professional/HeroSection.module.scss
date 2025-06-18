@@ -1,0 +1,148 @@
+@import '@/scss/index.scss';
+
+.heroSection {
+    text-align: center;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, $primary2 0%, $primary3 100%);
+    border-radius: 12px;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+    
+    @media screen and (max-width: 945px) {
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 30% 20%, rgba($accent2, 0.1) 0%, transparent 50%);
+        pointer-events: none;
+    }
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    
+    @media screen and (max-width: 945px) {
+        padding: 0 1rem;
+    }
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $secondary4;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, $accent2, $accent1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    
+    @media screen and (max-width: 1275px) {
+        font-size: 3.5rem;
+    }
+    
+    @media screen and (max-width: 945px) {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.heroSubtitle {
+    font-size: $body_text_size;
+    color: $secondary1;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media screen and (max-width: 945px) {
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+}
+
+.heroStats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    
+    @media screen and (max-width: 1275px) {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 400px;
+        gap: 1.5rem;
+    }
+    
+    @media screen and (max-width: 945px) {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        gap: 1rem;
+    }
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba($primary1, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba($lines, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    
+    @media screen and (max-width: 945px) {
+        padding: 1rem;
+    }
+    
+    &:hover {
+        transform: translateY(-4px);
+        border-color: $accent2;
+    }
+}
+
+.statNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $accent2;
+    margin-bottom: 0.5rem;
+    
+    @media screen and (max-width: 945px) {
+        font-size: 2rem;
+    }
+}
+
+.statNumberInfinite {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $accent2;
+    margin-top: -0.5rem;
+    
+    @media screen and (max-width: 945px) {
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+}
+
+.statLabel {
+    font-size: $labels_size;
+    color: $secondary1;
+    text-align: center;
+    
+    @media screen and (max-width: 945px) {
+        font-size: $labels_size * 0.9;
+    }
+}
