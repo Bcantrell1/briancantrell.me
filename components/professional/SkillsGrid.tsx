@@ -9,6 +9,11 @@ import ReactIcon from '../svg/ReactIcon';
 import TSIcon from '../svg/TSIcon';
 import styles from './SkillsGrid.module.scss';
 
+interface Skill {
+    name: string;
+    level: number;
+}
+
 const iconMap: { [key: string]: React.ComponentType } = {
     React: ReactIcon,
     TypeScript: TSIcon,
@@ -37,7 +42,7 @@ export default function SkillsGrid() {
                         <div key={categoryKey} className={styles.category}>
                             <h3 className={styles.categoryTitle}>{category.name}</h3>
                             <div className={styles.skillsList}>
-                                {category.skills.map((skill: any) => {
+                                {category.skills.map((skill: Skill) => {
                                     const IconComponent = iconMap[skill.name];
                                     return (
                                         <div key={skill.name} className={styles.skillItem}>

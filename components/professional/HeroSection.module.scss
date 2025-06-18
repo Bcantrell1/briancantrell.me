@@ -1,4 +1,4 @@
-@import '@/scss/index.scss';
+@use '@/scss/index.scss' as *;
 
 .heroSection {
     text-align: center;

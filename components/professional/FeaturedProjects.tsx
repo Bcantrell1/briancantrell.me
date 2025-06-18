@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import styles from './FeaturedProjects.module.scss';
 
 interface Project {
@@ -14,30 +15,6 @@ interface Project {
 export default function FeaturedProjects() {
     const t = useTranslations('ProfessionalPage.featuredProjects');
     
-    const featuredProjects: Project[] = [
-        {
-            title: 'Pro Motocross API',
-            description: 'A comprehensive API supporting Event and Rider information for the Pro Motocross season, serving as a source of truth for attendees per event.',
-            technologies: ['Go', 'HTML'],
-            image: 'https://res.cloudinary.com/da5dchwkj/image/upload/v1745609232/pro-motocross-api_oyhwsl.png',
-            url: 'https://pro-motocross-api.briancantrell.me/swagger/'
-        },
-        {
-            title: 'Cosmic Hall',
-            description: 'Virtual classroom intended to teach the basics of the cosmos, covering topics related to common misunderstandings and industry fundamentals.',
-            technologies: ['React', 'TypeScript', 'HTML', 'CSS'],
-            image: 'https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png',
-            url: 'https://www.cosmic-hall.com/'
-        },
-        {
-            title: 'SGM Scapes',
-            description: 'A website for a local landscaping company featuring standard pages, custom project estimation wizard, news area, and interactive carousel.',
-            technologies: ['React', 'HTML', 'CSS'],
-            image: 'https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png',
-            url: 'https://www.sgmscapes.com/'
-        }
-    ];
-    
     return (
         <section className={styles.projectsSection}>
             <h2 className={styles.sectionTitle}>{t('title')}</h2>
@@ -46,10 +23,14 @@ export default function FeaturedProjects() {
             </p>
             
             <div className={styles.projectsGrid}>
-                {t.raw('projects').map((project: any, index: number) => (
-                    <div key={project.title} className={styles.projectCard}>
+                {t.raw('projects').map((project: Project, index: number) => (
+                    <div key={index} className={styles.projectCard}>
                         <div className={styles.projectImage}>
-                            <img src={project.image} alt={project.title} />
+                            <Image 
+														src={project.image} 
+														alt={project.title} 
+														fill
+													/>
                             <div className={styles.projectOverlay}>
                                 <a 
                                     href={project.url} 
