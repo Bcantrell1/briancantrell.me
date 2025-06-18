@@ -209,5 +209,135 @@
                 "tags": ["p5.js", "canvas", "html", "css"]
             }
         ]
+    },
+    "ProfessionalPage": {
+        "heroSection": {
+            "title": "Profesional",
+            "subtitle": "Estadísticas hasta ahora...",
+            "stats": {
+                "experience": {
+                    "number": "5+",
+                    "label": "Años de Experiencia"
+                },
+                "projects": {
+                    "number": "200+",
+                    "label": "Proyectos Entregados"
+                },
+                "clients": {
+                    "number": "100+",
+                    "label": "Clientes Atendidos"
+                },
+                "technologies": {
+                    "number": "∞",
+                    "label": "Tecnologías"
+                }
+            }
+        },
+        "featuredProjects": {
+            "title": "Proyectos Destacados",
+            "subtitle": "Una selección de mi trabajo más impactante e innovador",
+            "viewProject": "Ver Proyecto →",
+            "projects": [
+                {
+                    "title": "API de Pro Motocross",
+                    "description": "Una API integral que proporciona información sobre Eventos y Pilotos para la temporada de Pro Motocross, sirviendo como fuente de verdad para asistentes por evento.",
+                    "technologies": ["Go", "HTML"],
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1745609232/pro-motocross-api_oyhwsl.png",
+                    "url": "https://pro-motocross-api.briancantrell.me/swagger/"
+                },
+                {
+                    "title": "Cosmic Hall",
+                    "description": "Aula virtual destinada a enseñar los fundamentos del cosmos, cubriendo temas relacionados con malentendidos comunes y fundamentos de la industria.",
+                    "technologies": ["React", "TypeScript", "HTML", "CSS"],
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905223/cosmic_thumb_fazf2o.png",
+                    "url": "https://www.cosmic-hall.com/"
+                },
+                {
+                    "title": "SGM Scapes",
+                    "description": "Un sitio web para una empresa local de paisajismo que incluye páginas estándar, asistente personalizado para estimación de proyectos, área de noticias y carrusel interactivo.",
+                    "technologies": ["React", "HTML", "CSS"],
+                    "image": "https://res.cloudinary.com/da5dchwkj/image/upload/v1741905970/sgm_kammbf.png",
+                    "url": "https://www.sgmscapes.com/"
+                }
+            ]
+        },
+        "skillsGrid": {
+            "title": "Habilidades y Tecnologías",
+            "subtitle": "Una visión general completa de mi experiencia técnica y una idea de mis niveles de competencia",
+            "categories": {
+                "frontend": {
+                    "name": "Frontend",
+                    "skills": [
+                        { "name": "React", "level": 90 },
+                        { "name": "TypeScript", "level": 85 },
+                        { "name": "HTML", "level": 95 },
+                        { "name": "CSS", "level": 90 }
+                    ]
+                },
+                "backend": {
+                    "name": "Backend",
+                    "skills": [
+                        { "name": "Node.js", "level": 85 },
+                        { "name": "Python", "level": 80 },
+                        { "name": "Go", "level": 70 },
+                        { "name": "PHP", "level": 75 }
+                    ]
+                },
+                "databases": {
+                    "name": "Bases de Datos",
+                    "skills": [
+                        { "name": "MySQL", "level": 85 },
+                        { "name": "PostgreSQL", "level": 80 },
+                        { "name": "MongoDB", "level": 75 },
+                        { "name": "Turso", "level": 70 }
+                    ]
+                },
+                "tools": {
+                    "name": "Herramientas y Plataformas",
+                    "skills": [
+                        { "name": "AWS", "level": 80 },
+                        { "name": "Docker", "level": 75 },
+                        { "name": "Git", "level": 90 },
+                        { "name": "Neovim", "level": 85 }
+                    ]
+                }
+            }
+        },
+        "valuesSection": {
+            "title": "Mis Valores y Enfoque",
+            "subtitle": "Los principios que guían mi trabajo y filosofía de desarrollo",
+            "values": [
+                {
+                    "title": "Resolución de Problemas",
+                    "description": "Abordo cada desafío con pensamiento analítico y soluciones creativas.",
+                    "icon": "🧩"
+                },
+                {
+                    "title": "Código Limpio",
+                    "description": "Escribir código mantenible, legible y bien documentado es mi estándar.",
+                    "icon": "✨"
+                },
+                {
+                    "title": "Aprendizaje Continuo",
+                    "description": "Haciendo lo mejor para mantenerme actualizado con las últimas tecnologías y mejores prácticas.",
+                    "icon": "📚"
+                },
+                {
+                    "title": "Enfoque en el Usuario",
+                    "description": "Construir soluciones que proporcionen valor real y excelente UI/UX.",
+                    "icon": "🎯"
+                },
+                {
+                    "title": "Colaboración",
+                    "description": "Prosperando en entornos de equipo y compartiendo mi conocimiento con otros.",
+                    "icon": "🤝"
+                },
+                {
+                    "title": "Rendimiento",
+                    "description": "Optimizando para velocidad, eficiencia y escalabilidad en todo lo que construyo.",
+                    "icon": "⚡"
+                }
+            ]
+        }
     }
 }

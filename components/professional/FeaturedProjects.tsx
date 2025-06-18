@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import styles from './FeaturedProjects.module.scss';
 
 interface Project {
@@ -9,6 +12,8 @@ interface Project {
 }
 
 export default function FeaturedProjects() {
+    const t = useTranslations('ProfessionalPage.featuredProjects');
+    
     const featuredProjects: Project[] = [
         {
             title: 'Pro Motocross API',
@@ -35,13 +40,13 @@ export default function FeaturedProjects() {
     
     return (
         <section className={styles.projectsSection}>
-            <h2 className={styles.sectionTitle}>Featured Projects</h2>
+            <h2 className={styles.sectionTitle}>{t('title')}</h2>
             <p className={styles.sectionSubtitle}>
-                A selection of my most impactful and innovative work
+                {t('subtitle')}
             </p>
             
             <div className={styles.projectsGrid}>
-                {featuredProjects.map((project) => (
+                {t.raw('projects').map((project: any, index: number) => (
                     <div key={project.title} className={styles.projectCard}>
                         <div className={styles.projectImage}>
                             <img src={project.image} alt={project.title} />
@@ -52,7 +57,7 @@ export default function FeaturedProjects() {
                                     rel="noopener noreferrer"
                                     className={styles.projectLink}
                                 >
-                                    View Project →
+                                    {t('viewProject')}
                                 </a>
                             </div>
                         </div>
@@ -61,7 +66,7 @@ export default function FeaturedProjects() {
                             <h3 className={styles.projectTitle}>{project.title}</h3>
                             <p className={styles.projectDescription}>{project.description}</p>
                             <div className={styles.projectTechnologies}>
-                                {project.technologies.map((tech) => (
+                                {project.technologies.map((tech: string) => (
                                     <span key={tech} className={styles.techTag}>
                                         {tech}
                                     </span>
